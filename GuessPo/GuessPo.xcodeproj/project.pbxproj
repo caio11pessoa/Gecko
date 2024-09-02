@@ -15,6 +15,8 @@
 		34D493792C856D3F00B661EC /* GuessPoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493782C856D3F00B661EC /* GuessPoViewModel.swift */; };
 		34D4937D2C856D8600B661EC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937C2C856D8600B661EC /* Components.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
+		DD53E38B2C860DDE00B83743 /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD53E38A2C860DDE00B83743 /* TitanOne-Regular.ttf */; };
+		DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E38E2C860EE100B83743 /* FontExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,9 @@
 		34D493782C856D3F00B661EC /* GuessPoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoViewModel.swift; sourceTree = "<group>"; };
 		34D4937C2C856D8600B661EC /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DD53E38A2C860DDE00B83743 /* TitanOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitanOne-Regular.ttf"; sourceTree = "<group>"; };
+		DD53E38C2C860E2F00B83743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DD53E38E2C860EE100B83743 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 		343215182C825BD100D37B66 /* GuessPo */ = {
 			isa = PBXGroup;
 			children = (
+				DD53E38C2C860E2F00B83743 /* Info.plist */,
 				34D4937B2C856D7100B661EC /* Components */,
 				34D4937A2C856D6100B661EC /* Views */,
 				34D493772C856D1F00B661EC /* ViewModels */,
@@ -66,6 +72,7 @@
 				343215192C825BD100D37B66 /* GuessPoApp.swift */,
 				3432151B2C825BD100D37B66 /* ContentView.swift */,
 				3432151D2C825BD200D37B66 /* Assets.xcassets */,
+				DD53E38D2C860EC200B83743 /* Fonts */,
 				3432151F2C825BD200D37B66 /* Preview Content */,
 			);
 			path = GuessPo;
@@ -109,6 +116,15 @@
 				34D4937C2C856D8600B661EC /* Components.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DD53E38D2C860EC200B83743 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DD53E38A2C860DDE00B83743 /* TitanOne-Regular.ttf */,
+				DD53E38E2C860EE100B83743 /* FontExtension.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				343215212C825BD200D37B66 /* Preview Assets.xcassets in Resources */,
+				DD53E38B2C860DDE00B83743 /* TitanOne-Regular.ttf in Resources */,
 				3432151E2C825BD200D37B66 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +200,7 @@
 			files = (
 				34D493762C856CE100B661EC /* Players.swift in Sources */,
 				3432151C2C825BD100D37B66 /* ContentView.swift in Sources */,
+				DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */,
 				34D4937D2C856D8600B661EC /* Components.swift in Sources */,
 				34D4937F2C856D9500B661EC /* HomeView.swift in Sources */,
 				3432151A2C825BD100D37B66 /* GuessPoApp.swift in Sources */,
@@ -323,6 +341,7 @@
 				DEVELOPMENT_TEAM = MT4A7M75NC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuessPo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -352,6 +371,7 @@
 				DEVELOPMENT_TEAM = MT4A7M75NC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuessPo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
