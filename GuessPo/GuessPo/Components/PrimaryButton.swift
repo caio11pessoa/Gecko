@@ -21,8 +21,7 @@ struct PrimaryButton: View {
                     Text(title)
                         .foregroundStyle(.guessPoGray)
                         .fontDesign(.rounded)
-                        .bold()
-                        .font(.system(size: 21))
+                        .font(.headline)
                 }
         }
     }
