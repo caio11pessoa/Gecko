@@ -18,6 +18,7 @@
 		364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EBCB62C861EE600258A61 /* ThemeButton.swift */; };
 		36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D32C8629EA00164504 /* PrimaryButton.swift */; };
 		36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D52C862EEE00164504 /* WordRevealTag.swift */; };
+		C8C026362C864E8900FB2C66 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C026352C864E8900FB2C66 /* ThemeView.swift */; };
 		DD53E38B2C860DDE00B83743 /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD53E38A2C860DDE00B83743 /* TitanOne-Regular.ttf */; };
 		DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E38E2C860EE100B83743 /* FontExtension.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		364EBCB62C861EE600258A61 /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		36E300D32C8629EA00164504 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		36E300D52C862EEE00164504 /* WordRevealTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealTag.swift; sourceTree = "<group>"; };
+		C8C026352C864E8900FB2C66 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		DD53E38A2C860DDE00B83743 /* TitanOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitanOne-Regular.ttf"; sourceTree = "<group>"; };
 		DD53E38C2C860E2F00B83743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DD53E38E2C860EE100B83743 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				34D4937E2C856D9500B661EC /* HomeView.swift */,
+				C8C026352C864E8900FB2C66 /* ThemeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */,
+				C8C026362C864E8900FB2C66 /* ThemeView.swift in Sources */,
 				34D493762C856CE100B661EC /* Players.swift in Sources */,
 				3432151C2C825BD100D37B66 /* ContentView.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
