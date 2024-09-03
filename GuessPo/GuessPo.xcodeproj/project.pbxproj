@@ -15,6 +15,7 @@
 		34D493792C856D3F00B661EC /* GuessPoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493782C856D3F00B661EC /* GuessPoViewModel.swift */; };
 		34D4937D2C856D8600B661EC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937C2C856D8600B661EC /* Components.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
+		34D493862C86C9D400B661EC /* StartGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493852C86C9D400B661EC /* StartGameScreen.swift */; };
 		34D493842C86AA5C00B661EC /* WordRevealScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493832C86AA5C00B661EC /* WordRevealScreen.swift */; };
 		34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */; };
 		364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EBCB62C861EE600258A61 /* ThemeButton.swift */; };
@@ -36,6 +37,7 @@
 		34D493782C856D3F00B661EC /* GuessPoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoViewModel.swift; sourceTree = "<group>"; };
 		34D4937C2C856D8600B661EC /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		34D493852C86C9D400B661EC /* StartGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameScreen.swift; sourceTree = "<group>"; };
 		34D493832C86AA5C00B661EC /* WordRevealScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealScreen.swift; sourceTree = "<group>"; };
 		34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoTextFieldStyle.swift; sourceTree = "<group>"; };
 		364EBCB62C861EE600258A61 /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				DD53E3912C8674D000B83743 /* NameScreen.swift */,
+				34D493852C86C9D400B661EC /* StartGameScreen.swift */,
 				34D493832C86AA5C00B661EC /* WordRevealScreen.swift */,
 			);
 			path = WordReveal;
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D493862C86C9D400B661EC /* StartGameScreen.swift in Sources */,
 				36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */,
 				C8C026362C864E8900FB2C66 /* ThemeView.swift in Sources */,
 				34D493762C856CE100B661EC /* Players.swift in Sources */,
