@@ -9,26 +9,41 @@ import SwiftUI
 
 struct WordRevealScreen: View {
 
-    var player: String = "Pedro"
-    var word: String = "Word"
-    
+    var player: Player = .init(name: "Pedro", role: .imposter)
+
+    var tema: String = "Famosos"
+
+    var word: String {
+        if player.role == .imposter {
+            return "Impostor"
+        }
+        return "word"
+    }
+
+    var wordTextPreview: String {
+        if player.role == .imposter {
+            return "Se prepare, pois você é:"
+        }
+        return "A palavra da rodada é:"
+        
+    }
     var body: some View {
 
         VStack(spacing: 0) {
 
             Spacer()
 
-            Text(player)
+            Text(player.name)
                 .font(.guessPoTitan(48))
                 .foregroundStyle(.guessPoDarkBlue)
             
-            Text("A palavra da rodada é:")
+            Text(wordTextPreview)
                 .font(.system(size: 16))
                 .bold()
                 .fontDesign(.rounded)
                 .padding(.top, 18)
             
-            WordRevealTag(title: word, isImpostor: false)
+            WordRevealTag(title: word, isImpostor: player.role == .imposter)
                 .frame(height: 54)
                 .padding(.top, 18)
             
@@ -56,10 +71,24 @@ struct WordRevealScreen: View {
 
         Group {
 
-            Text("Todo mundo vai receber essa mesma palavra, exceto o ")
-            +
-            Text("impostor.")
-                .foregroundStyle(.guessPoDarkRed)
+            switch player.role {
+            case .imposter:
+
+                Text("O tema da rodada é ")
+                +
+                Text(tema)
+                    .foregroundStyle(.blue)
+                +
+                Text(", agora é só fingir que sabe qual é a palavra.")
+
+            case .person:
+
+                Text("Todo mundo vai receber essa mesma palavra, exceto o ")
+                +
+                Text("impostor.")
+                    .foregroundStyle(.guessPoDarkRed)
+
+            }
 
         }
     }
