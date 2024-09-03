@@ -8,97 +8,119 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @State var newPlayer: String = ""
     @State var players: [String] = [
         "Pedro","Ian", "Lais", "Caio", "Julia", "Joao"
     ]
-    func setTitle(text: String) -> Text {
-        Text(text)
-            .font(.guessPoTitan(.title2))
-            .foregroundStyle(.guessPoDarkBlue)
-    }
-    func setSubTitle(text: String) -> Text {
-        Text(text)
-            .fontDesign(.rounded)
-            .font(.system(size: 16))
-    }
-    func setTextField(_ placeholder: LocalizedStringKey, text: Binding<String>) -> some View {
-        TextField(placeholder, text: text)
-            .textFieldStyle(OvalTextFieldStyle())
-    }
+    
     var body: some View {
+
         NavigationStack {
+
             VStack(alignment: .leading, spacing: 0) {
-                setTitle(
-                    text: "Quem vai jogar?"
-                )
-                .padding(.top, 20)
-                setSubTitle(
-                    text: "Adicione aqui os novos jogadores:"
-                )
-                .padding(.top, 4)
+                
+                setTitle( text: "Quem vai jogar?" )
+                    .padding(.top, 20)
+                
+                setSubTitle( text: "Adicione aqui os novos jogadores:")
+                    .padding(.top, 4)
                 
                 setTextField("Adicionar", text: $newPlayer)
                     .padding(.top, 8)
-                PrimaryButton(
-                    title: "Adicionar"
-                ) {
-                    print("Adicionar")
+                
+                PrimaryButton( title: "Adicionar") {
+                    // add novo jogador
                 }
                 .frame(height: 48)
                 .padding(.top, 16)
-                setTitle(
-                    text: "Participantes"
-                )
-                .padding(.top, 44)
-                setSubTitle(
-                    text: "Aqui estão todos os participantes até o momento:"
-                )
-                .padding(.top, 4)
-                List(players, id: \.self) { player in
-                    Text(player)
-                }
-                .listStyle(.plain)
-                .padding(.top, 20)
-                .frame(height: 260)
-                PrimaryButton(
-                    title: "Jogar"
-                ) {
-                    print("Jogar")
+                
+                setTitle( text: "Participantes" )
+                    .padding(.top, 44)
+                
+                setSubTitle( text: "Aqui estão todos os participantes até o momento:")
+                    .padding(.top, 4)
+                
+                playerList
+                    .padding(.top, 20)
+                
+                PrimaryButton( title: "Jogar" ) {
+                    //Navegação
                 }
                 .frame(height: 48)
                 .padding(.top, 20)
+                .padding(.bottom, 130)
                 Spacer()
+                
             }
             .toolbar {
+
                 ToolbarItem(placement: .topBarTrailing) {
-                    Image(systemName: "questionmark.circle")
-                        .foregroundStyle(.guessPoDarkBlue)
-                        .font(.system(size: 16))
+                    setToolbarIcon(systemName: "questionmark.circle")//features futuras
                 }
+
                 ToolbarItem(placement: .topBarTrailing) {
-                    Image(systemName: "gearshape.fill")
-                        .foregroundStyle(.guessPoDarkBlue)
-                        .font(.system(size: 16))
+                    setToolbarIcon(systemName: "gearshape.fill")//features futuras
                 }
+
             }
             .scenePadding(.horizontal)
             .background(.guessPoGray)
+
         }
     }
-}
+    
+    func setTitle(text: String) -> Text {
 
-struct OvalTextFieldStyle: TextFieldStyle {
-    func _body(configuration: TextField<Self._Label>) -> some View {
-        configuration
-            .padding(10)
-            .background(.white)
-            .cornerRadius(10)
+        Text(text)
+            .font(.guessPoTitan(.title2))
+            .foregroundStyle(.guessPoDarkBlue)
+
+    }
+
+    func setSubTitle(text: String) -> Text {
+
+        Text(text)
+            .fontDesign(.rounded)
+            .font(.system(size: 16))
+
+    }
+
+    func setTextField(
+        _ placeholder: LocalizedStringKey,
+        text: Binding<String>
+    ) -> some View {
+
+        TextField(placeholder, text: text)
+            .textFieldStyle(GuessPoTextFieldStyle())
+
+    }
+
+    func setToolbarIcon(systemName: String) -> some View{
+
+        Image(systemName: systemName)
+            .foregroundStyle(.guessPoDarkBlue)
+            .font(.system(size: 16))
+
+    }
+    
+    var playerList: some View {
+
+        RoundedRectangle(cornerRadius: 25)
+            .foregroundStyle(.white)
             .overlay {
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(lineWidth: 0.2)
+
+                List(players, id: \.self) { player in
+
+                    Text(player)
+                        .font(.guessPoTitan(.callout))
+                        .listRowBackground(Color.clear)
+
+                }
+                .listStyle(.plain)
+                .scrollContentBackground(.hidden)
+
             }
-            .font(.guessPoTitan(.callout))
     }
 }
 
