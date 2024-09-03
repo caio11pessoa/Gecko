@@ -24,7 +24,28 @@ extension Font {
     static func guessPoTitan(_ customSize: CGFloat) -> Font {
             return .custom("TitanOne", size: customSize)
         }
-        
+    
+    /// Font: TitanOne
+    ///
+    /// largeTitle - 34;   
+    ///
+    /// title - 28;
+    ///
+    /// title2 - 22;
+    ///
+    /// title3 - 20;   
+    ///
+    /// body - 17;
+    ///
+    /// callout - 16;
+    ///
+    /// subheadline - 15;
+    ///
+    /// footnote - 13;
+    ///
+    /// caption - 12;
+    ///
+    /// caption2 - 11;
     static func guessPoTitan(_ size: FontSizes) -> Font {
         return .custom("TitanOne", size: size.rawValue)
     }
