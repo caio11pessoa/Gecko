@@ -15,6 +15,7 @@
 		34D493792C856D3F00B661EC /* GuessPoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493782C856D3F00B661EC /* GuessPoViewModel.swift */; };
 		34D4937D2C856D8600B661EC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937C2C856D8600B661EC /* Components.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
+		34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */; };
 		364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EBCB62C861EE600258A61 /* ThemeButton.swift */; };
 		36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D32C8629EA00164504 /* PrimaryButton.swift */; };
 		36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D52C862EEE00164504 /* WordRevealTag.swift */; };
@@ -33,6 +34,7 @@
 		34D493782C856D3F00B661EC /* GuessPoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoViewModel.swift; sourceTree = "<group>"; };
 		34D4937C2C856D8600B661EC /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoTextFieldStyle.swift; sourceTree = "<group>"; };
 		364EBCB62C861EE600258A61 /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		36E300D32C8629EA00164504 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		36E300D52C862EEE00164504 /* WordRevealTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealTag.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				364EBCB62C861EE600258A61 /* ThemeButton.swift */,
 				36E300D32C8629EA00164504 /* PrimaryButton.swift */,
 				36E300D52C862EEE00164504 /* WordRevealTag.swift */,
+				34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */,
 				34D493762C856CE100B661EC /* Players.swift in Sources */,
+				34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */,
 				3432151C2C825BD100D37B66 /* ContentView.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */,
