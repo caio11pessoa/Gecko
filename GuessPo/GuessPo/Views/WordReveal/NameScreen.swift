@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NameScreen: View {
+    @State var player: Player
     
     
     var body: some View {
@@ -24,7 +25,7 @@ struct NameScreen: View {
             
             Spacer()
 
-            PrimaryButton(title: "Eu sou o NameHere") {
+            PrimaryButton(title: "Eu sou o \(player.name)") {
                 print("")
             }
             .frame(height: 48)
@@ -38,12 +39,12 @@ struct NameScreen: View {
             Image(systemName: "eyes")
                 .font(.custom("default", size: 120))
             
-            Text("NameHere")
+            Text("\(player.name)")
                 .font(.guessPoTitan(48))
         }
     }
 }
 
 #Preview {
-    NameScreen()
+    NameScreen(player: .init(name: "Caio", role: .imposter))
 }

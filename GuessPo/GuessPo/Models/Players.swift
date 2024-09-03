@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+enum roles {
+case imposter, person
+}
+
+struct Player {
+    var name: String
+    var role: roles
+}
