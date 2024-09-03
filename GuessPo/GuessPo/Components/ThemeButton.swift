@@ -12,6 +12,7 @@ struct ThemeButton: View {
     @State var title: String
     @State var symbol : String
     @State var buttonAction: () -> Void
+    @State var isSelected: Bool = false
     
     var body: some View {
         Button(action: buttonAction) {
@@ -19,6 +20,10 @@ struct ThemeButton: View {
                 .presentationCornerRadius(30)
                 .foregroundStyle(.guessPoLightBlue)
                 .overlay {
+                    if isSelected {
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(.guessPoDarkBlue, lineWidth: 3)
+                    }
                     VStack {
                         Image(systemName: symbol)
                             .resizable()
@@ -31,6 +36,9 @@ struct ThemeButton: View {
                             .font(.guessPoTitan(20))
                     }
                 }
+                .onTapGesture {
+                    isSelected.toggle()
+                }
         }
     }
 }
@@ -39,4 +47,6 @@ struct ThemeButton: View {
     ThemeButton(title: "Marcos", symbol: "trash.fill", buttonAction: {
         //
     })
+    .padding(.horizontal, 50)
+    .padding(.vertical, 300)
 }
