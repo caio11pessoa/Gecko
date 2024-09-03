@@ -16,37 +16,40 @@ enum themes: String, CaseIterable {
 }
 
 struct ThemeView: View {
-    let layout = [ 
-        GridItem(.fixed(100), spacing: 60),
-        GridItem(.fixed(100))
-    ]
-//    let themes = ["Locais", "Famosos","Animais", "Personagens", "Comidas"]
-    
-    
+    let layout = Array(repeating: GridItem(.flexible()), count: 2)
+
     var body: some View {
-        VStack(spacing: 50) {
+        ZStack {
+            Color(.guessPoGray)
+                .ignoresSafeArea(.all)
+            
             VStack(alignment: .leading) {
                 Text("Escolha os temas")
                     .font(.guessPoTitan(.title2))
                     .foregroundStyle(.guessPoDarkBlue)
-                Text("Escolha o tema da palavra misteriosa")
-            }
-            
-            ScrollView {
-                LazyVGrid(columns: layout, content: {
-                    ForEach(themes.allCases, id: \.self) { theme in
-                        ThemeButton(title: "Local", symbol: theme.rawValue) {
-                            //function
+                Text("Escolha o tema da palavra misteriosa:")
+                
+                ScrollView {
+                    LazyVGrid(columns: layout, content: {
+                        ForEach(themes.allCases, id: \.self) { theme in
+                            ThemeButton(title: "\(theme)", symbol: theme.rawValue) {
+                                //function
+                            }
+                            .frame(height: 150)
                         }
-                        .frame(width: 150, height: 150)
-                    }
-                })
-            }
+                    }).padding(8)
+                }
+                .background(RoundedRectangle(cornerRadius: 15).foregroundStyle(.white))
+                
+                PrimaryButton(title: "Começar") {
+                    //function
+                }
+                .frame(width: 336, height: 48)
+                
+            }.padding()
         }
-        .padding()
     }
 }
-
 #Preview {
     ThemeView()
 }
