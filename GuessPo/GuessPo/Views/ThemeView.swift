@@ -7,15 +7,23 @@
 
 import SwiftUI
 
-enum themes: String, CaseIterable {
-    case Locais = "map"
-    case Famosos = "star.circle.fill"
-    case Animais = "dog.fill"
-    case Personagens = "movieclapper.fill"
-    case Comidas = "bag"
-}
+fileprivate var themes: [Theme] = [
+    .init(themeName: "Locais", themeSymbol: "map", wordList: ["Locais"]),
+    .init(themeName: "Famosos", themeSymbol: "star.circle.fill", wordList: ["Famosos"]),
+    .init(themeName: "Animais", themeSymbol: "dog.fill", wordList: ["Animais"]),
+    .init(themeName: "Personagens", themeSymbol: "movieclapper.fill", wordList: ["Personagens"]),
+    .init(themeName: "Comidas", themeSymbol: "bag", wordList: ["Comidas"])
+
+    ]
 
 struct ThemeView: View {
+    @Binding var navigationCoordinator: NavigationCoordinator
+    
+    @Binding var gameViewModel: GameViewModel
+    
+    // Tratar logica de carregar temas default
+    @State var currentTheme: Theme = themes.first!
+    
     let layout = Array(repeating: GridItem(.flexible()), count: 2)
 
     var body: some View {
@@ -31,9 +39,9 @@ struct ThemeView: View {
                 
                 ScrollView {
                     LazyVGrid(columns: layout, content: {
-                        ForEach(themes.allCases, id: \.self) { theme in
-                            ThemeButton(title: "\(theme)", symbol: theme.rawValue) {
-                                //function
+                        ForEach(themes, id: \.self) { theme in
+                            ThemeButton(title: "\(theme.themeName)", symbol: theme.themeSymbol) {
+                                currentTheme = theme
                             }
                             .frame(height: 150)
                         }
@@ -42,7 +50,7 @@ struct ThemeView: View {
                 .background(RoundedRectangle(cornerRadius: 15).foregroundStyle(.white))
                 
                 PrimaryButton(title: "Começar") {
-                    //function
+                    gameViewModel.prepareGame()
                 }
                 .frame(width: 336, height: 48)
                 
@@ -51,5 +59,5 @@ struct ThemeView: View {
     }
 }
 #Preview {
-    ThemeView()
+    ThemeView(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
 }

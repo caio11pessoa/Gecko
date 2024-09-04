@@ -9,5 +9,7 @@ import Foundation
 
 struct Theme: Identifiable, Hashable {
     var id: UUID = UUID()
+    var themeName: String
+    var themeSymbol: String
     var wordList: [String]
 }

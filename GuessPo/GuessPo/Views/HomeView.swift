@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State var navigationCoordinator = NavigationCoordinator()
     
-    @State var wordsViewModel = WordAtributionViewModel()
+    @State var gameViewModel = GameViewModel()
     
     @State var newPlayer: String = ""
     
@@ -29,8 +29,9 @@ struct HomeView: View {
                 setTextField("Adicionar", text: $newPlayer)
                     .padding(.top, 8)
                 
-                PrimaryButton( title: "Adicionar") {
-                    // add novo jogador
+                PrimaryButton(title: "Adicionar") {
+                    gameViewModel.addPlayer(playerName: newPlayer)
+                    newPlayer = ""
                 }
                 .frame(height: 48)
                 .padding(.top, 16)
@@ -45,7 +46,7 @@ struct HomeView: View {
                     .padding(.top, 20)
                 
                 PrimaryButton( title: "Jogar" ) {
-                    navigationCoordinator.appendToPath(.nameReveal)
+                    navigationCoordinator.appendToPath(.themeSelect)
                 }
                 .frame(height: 48)
                 .padding(.top, 20)
@@ -72,12 +73,14 @@ struct HomeView: View {
             switch route {
             case .home:
                 HomeView()
+            case .themeSelect:
+                ThemeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
             case .nameReveal:
                 // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                NameScreen(navigationCoordinator: $navigationCoordinator, wordsViewModel: $wordsViewModel)
+                NameScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
             case .wordReveal:
                 // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                WordRevealScreen(navigationCoordinator: $navigationCoordinator, tema: "")
+                WordRevealScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
             }
         }
     }
@@ -122,7 +125,7 @@ struct HomeView: View {
             .foregroundStyle(.white)
             .overlay {
                 
-                List(wordsViewModel.players, id: \.self) { player in
+                List(gameViewModel.players, id: \.self) { player in
                     
                     Text(player.name)
                         .font(.guessPoTitan(.callout))
@@ -137,7 +140,7 @@ struct HomeView: View {
     
     
     func addNewPlayer() {
-        wordsViewModel.addPlayer(playerName: newPlayer)
+        gameViewModel.addPlayer(playerName: newPlayer)
         
         newPlayer = ""
     }

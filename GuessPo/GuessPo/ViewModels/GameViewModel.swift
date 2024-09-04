@@ -1,5 +1,5 @@
 //
-//  WordAtributionViewModel.swift
+//  GameViewModel.swift
 //  GuessPo
 //
 //  Created by Ian Pacini on 04/09/24.
@@ -8,7 +8,7 @@
 import Foundation
 
 @Observable
-class WordAtributionViewModel {
+class GameViewModel {
     
     var players: [Player] = []
     
@@ -58,6 +58,11 @@ class WordAtributionViewModel {
             return
         }
         
+        if self.selectedTheme == nil {
+            // throw
+            return
+        }
+        
         guard let currentPlayer = self.popPlayerList() else {
             // throw
             return
@@ -66,10 +71,7 @@ class WordAtributionViewModel {
             // throw
             return
         }
-        guard let currentTheme = self.selectedTheme else {
-            // throw
-            return
-        }
+        
         guard let selectedWord = self.generateWord() else {
             // throw
             return

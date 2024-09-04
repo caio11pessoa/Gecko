@@ -10,7 +10,7 @@ import SwiftUI
 struct NameScreen: View {
     @Binding var navigationCoordinator: NavigationCoordinator
 
-    @Binding var wordsViewModel: WordAtributionViewModel
+    @Binding var gameViewModel: GameViewModel
     
     var body: some View {
         VStack {
@@ -26,7 +26,7 @@ struct NameScreen: View {
             
             Spacer()
 
-            PrimaryButton(title: "Eu sou o \(wordsViewModel.popPlayerList().name)") {
+            PrimaryButton(title: "Eu sou o \(gameViewModel.currentPlayer!.name)") {
                 navigationCoordinator.appendToPath(.wordReveal)
             }
             .frame(height: 48)
@@ -40,12 +40,12 @@ struct NameScreen: View {
             Image(systemName: "eyes")
                 .font(.custom("default", size: 120))
             
-            Text("\(player.name)")
+            Text("\(gameViewModel.currentPlayer!.name)")
                 .font(.guessPoTitan(48))
         }
     }
 }
 
 #Preview {
-    NameScreen(navigationCoordinator: .constant(.init()))
+    NameScreen(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
 }

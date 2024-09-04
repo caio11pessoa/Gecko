@@ -26,7 +26,7 @@
 		DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3912C8674D000B83743 /* NameScreen.swift */; };
 		DD53E3982C87E1FD00B83743 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3972C87E1FD00B83743 /* Routes.swift */; };
 		DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */; };
-		DD53E39C2C88BED900B83743 /* WordAtributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E39B2C88BED900B83743 /* WordAtributionViewModel.swift */; };
+		DD53E39C2C88BED900B83743 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E39B2C88BED900B83743 /* GameViewModel.swift */; };
 		DD53E39E2C88C37A00B83743 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E39D2C88C37A00B83743 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +52,7 @@
 		DD53E3912C8674D000B83743 /* NameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameScreen.swift; sourceTree = "<group>"; };
 		DD53E3972C87E1FD00B83743 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
-		DD53E39B2C88BED900B83743 /* WordAtributionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAtributionViewModel.swift; sourceTree = "<group>"; };
+		DD53E39B2C88BED900B83743 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		DD53E39D2C88C37A00B83743 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +122,7 @@
 			children = (
 				DD53E3972C87E1FD00B83743 /* Routes.swift */,
 				DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */,
-				DD53E39B2C88BED900B83743 /* WordAtributionViewModel.swift */,
+				DD53E39B2C88BED900B83743 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 				3432151C2C825BD100D37B66 /* ContentView.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */,
-				DD53E39C2C88BED900B83743 /* WordAtributionViewModel.swift in Sources */,
+				DD53E39C2C88BED900B83743 /* GameViewModel.swift in Sources */,
 				DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */,
 				DD53E3982C87E1FD00B83743 /* Routes.swift in Sources */,
 				34D493842C86AA5C00B661EC /* WordRevealScreen.swift in Sources */,
