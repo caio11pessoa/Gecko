@@ -15,9 +15,9 @@
 		34D493792C856D3F00B661EC /* GuessPoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493782C856D3F00B661EC /* GuessPoViewModel.swift */; };
 		34D4937D2C856D8600B661EC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937C2C856D8600B661EC /* Components.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
-		34D493862C86C9D400B661EC /* StartGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493852C86C9D400B661EC /* StartGameScreen.swift */; };
-		34D493842C86AA5C00B661EC /* WordRevealScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493832C86AA5C00B661EC /* WordRevealScreen.swift */; };
 		34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */; };
+		34D493842C86AA5C00B661EC /* WordRevealScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493832C86AA5C00B661EC /* WordRevealScreen.swift */; };
+		34D493862C86C9D400B661EC /* StartGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493852C86C9D400B661EC /* StartGameScreen.swift */; };
 		364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EBCB62C861EE600258A61 /* ThemeButton.swift */; };
 		36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D32C8629EA00164504 /* PrimaryButton.swift */; };
 		36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D52C862EEE00164504 /* WordRevealTag.swift */; };
@@ -25,6 +25,8 @@
 		DD53E38B2C860DDE00B83743 /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD53E38A2C860DDE00B83743 /* TitanOne-Regular.ttf */; };
 		DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E38E2C860EE100B83743 /* FontExtension.swift */; };
 		DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3912C8674D000B83743 /* NameScreen.swift */; };
+		DD53E3982C87E1FD00B83743 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3972C87E1FD00B83743 /* Routes.swift */; };
+		DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +39,9 @@
 		34D493782C856D3F00B661EC /* GuessPoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoViewModel.swift; sourceTree = "<group>"; };
 		34D4937C2C856D8600B661EC /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		34D493852C86C9D400B661EC /* StartGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameScreen.swift; sourceTree = "<group>"; };
-		34D493832C86AA5C00B661EC /* WordRevealScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealScreen.swift; sourceTree = "<group>"; };
 		34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoTextFieldStyle.swift; sourceTree = "<group>"; };
+		34D493832C86AA5C00B661EC /* WordRevealScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealScreen.swift; sourceTree = "<group>"; };
+		34D493852C86C9D400B661EC /* StartGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameScreen.swift; sourceTree = "<group>"; };
 		364EBCB62C861EE600258A61 /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		36E300D32C8629EA00164504 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		36E300D52C862EEE00164504 /* WordRevealTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealTag.swift; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		DD53E38C2C860E2F00B83743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DD53E38E2C860EE100B83743 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		DD53E3912C8674D000B83743 /* NameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameScreen.swift; sourceTree = "<group>"; };
+		DD53E3972C87E1FD00B83743 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				34D493782C856D3F00B661EC /* GuessPoViewModel.swift */,
+				DD53E3972C87E1FD00B83743 /* Routes.swift */,
+				DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -239,8 +245,10 @@
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */,
 				DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */,
+				DD53E3982C87E1FD00B83743 /* Routes.swift in Sources */,
 				34D493842C86AA5C00B661EC /* WordRevealScreen.swift in Sources */,
 				364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */,
+				DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */,
 				34D4937D2C856D8600B661EC /* Components.swift in Sources */,
 				34D4937F2C856D9500B661EC /* HomeView.swift in Sources */,
 				3432151A2C825BD100D37B66 /* GuessPoApp.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WordRevealScreen: View {
+    @Binding var navigationCoordinator: NavigationCoordinator
 
     var player: Player = .init(name: "Pedro", role: .imposter)
 
@@ -56,7 +57,7 @@ struct WordRevealScreen: View {
             Spacer()
             
             PrimaryButton(title: "Entendido!") {
-                // Próxima tela
+                _ = navigationCoordinator.popPath()
             }
             .frame(height: 48)
             .padding(.bottom, 32)
@@ -95,5 +96,5 @@ struct WordRevealScreen: View {
 }
 
 #Preview {
-    WordRevealScreen()
+    WordRevealScreen(navigationCoordinator: .constant(.init()))
 }
