@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct NameScreen: View {
-    @State var player: Player
+    @Binding var navigationCoordinator: NavigationCoordinator
     
+    @State var player: Player
     
     var body: some View {
         VStack {
@@ -26,7 +27,7 @@ struct NameScreen: View {
             Spacer()
 
             PrimaryButton(title: "Eu sou o \(player.name)") {
-                print("")
+                navigationCoordinator.appendToPath(.wordReveal)
             }
             .frame(height: 48)
         }
@@ -46,5 +47,5 @@ struct NameScreen: View {
 }
 
 #Preview {
-    NameScreen(player: .init(name: "Caio", role: .imposter))
+    NameScreen(navigationCoordinator: .constant(.init()), player: .init(name: "Caio", role: .imposter))
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var navigationCoordinator = NavigationCoordinator()
     
     @State var newPlayer: String = ""
     @State var players: [String] = [
@@ -15,15 +16,15 @@ struct HomeView: View {
     ]
     
     var body: some View {
-
-        NavigationStack {
-
+        
+        NavigationStack(path: $navigationCoordinator.path) {
+            
             VStack(alignment: .leading, spacing: 0) {
                 
-                setTitle( text: "Quem vai jogar?" )
+                setTitle(text: "Quem vai jogar?")
                     .padding(.top, 20)
                 
-                setSubTitle( text: "Adicione aqui os novos jogadores:")
+                setSubTitle(text: "Adicione aqui os novos jogadores:")
                     .padding(.top, 4)
                 
                 setTextField("Adicionar", text: $newPlayer)
@@ -45,7 +46,7 @@ struct HomeView: View {
                     .padding(.top, 20)
                 
                 PrimaryButton( title: "Jogar" ) {
-                    //Navegação
+                    navigationCoordinator.appendToPath(.nameReveal)
                 }
                 .frame(height: 48)
                 .padding(.top, 20)
@@ -54,72 +55,84 @@ struct HomeView: View {
                 
             }
             .toolbar {
-
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     setToolbarIcon(systemName: "questionmark.circle")//features futuras
                 }
-
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     setToolbarIcon(systemName: "gearshape.fill")//features futuras
                 }
-
+                
             }
             .scenePadding(.horizontal)
             .background(.guessPoGray)
-
+            
+        }
+        .navigationDestination(for: Routes.self) { route in
+            switch route {
+            case .home:
+                HomeView()
+            case .nameReveal:
+                // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
+                NameScreen(navigationCoordinator: $navigationCoordinator, player: <#T##Player#>)
+            case .wordReveal:
+                // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
+                WordRevealScreen(navigationCoordinator: $navigationCoordinator, player: <#T##Player#>, tema: <#T##String#>)
+            }
         }
     }
     
     func setTitle(text: String) -> Text {
-
+        
         Text(text)
             .font(.guessPoTitan(.title2))
             .foregroundStyle(.guessPoDarkBlue)
-
+        
     }
-
+    
     func setSubTitle(text: String) -> Text {
-
+        
         Text(text)
             .fontDesign(.rounded)
             .font(.system(size: 16))
-
+        
     }
-
+    
     func setTextField(
         _ placeholder: LocalizedStringKey,
         text: Binding<String>
     ) -> some View {
-
+        
         TextField(placeholder, text: text)
             .textFieldStyle(GuessPoTextFieldStyle())
-
+        
     }
-
+    
     func setToolbarIcon(systemName: String) -> some View{
-
+        
         Image(systemName: systemName)
             .foregroundStyle(.guessPoDarkBlue)
             .font(.system(size: 16))
-
+        
     }
     
     var playerList: some View {
-
+        
         RoundedRectangle(cornerRadius: 25)
             .foregroundStyle(.white)
             .overlay {
-
+                
                 List(players, id: \.self) { player in
-
+                    
                     Text(player)
                         .font(.guessPoTitan(.callout))
                         .listRowBackground(Color.clear)
-
+                    
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
-
+                
             }
     }
 }
