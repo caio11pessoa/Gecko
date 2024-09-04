@@ -15,6 +15,9 @@ class WordAtributionViewModel {
     
     var impostor: Player
     
+    var selectedTheme: Theme?
+    var selectedWord: String?
+    
     func addPlayer(playerName: String) {
         let newPlayer = Player(name: playerName)
         
@@ -25,6 +28,18 @@ class WordAtributionViewModel {
         players.popLast()
     }
     
-    func wordSelection()
+    func selectTheme(theme: Theme) {
+        self.selectedTheme = theme
+    }
+    
+    func generateWord() /* Necessario tratamento de erro */ {
+        guard let selectedTheme = self.selectedTheme else {
+            
+        }
+        guard let selectedWord = selectedTheme.wordList.randomElement() else {
+            
+        }
+        self.selectedWord = selectedWord
+    }
     
 }

@@ -74,10 +74,10 @@ struct HomeView: View {
                 HomeView()
             case .nameReveal:
                 // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                NameScreen(navigationCoordinator: $navigationCoordinator)
+                NameScreen(navigationCoordinator: $navigationCoordinator, wordsViewModel: $wordsViewModel)
             case .wordReveal:
                 // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                WordRevealScreen(navigationCoordinator: $navigationCoordinator, player: <#T##Player#>, tema: <#T##String#>)
+                WordRevealScreen(navigationCoordinator: $navigationCoordinator, tema: <#T##String#>)
             }
         }
     }
