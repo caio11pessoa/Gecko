@@ -14,7 +14,6 @@ fileprivate var themes: [Theme] = [
     .init(themeName: "Animais", themeSymbol: "dog.fill", wordList: ["Animais"]),
     .init(themeName: "Personagens", themeSymbol: "movieclapper.fill", wordList: ["Personagens"]),
     .init(themeName: "Comidas", themeSymbol: "bag", wordList: ["Comidas"])
-
     ]
 
 struct ThemeView: View {
@@ -51,6 +50,7 @@ struct ThemeView: View {
                 .background(RoundedRectangle(cornerRadius: 15).foregroundStyle(.white))
                 
                 PrimaryButton(title: "Começar") {
+                    gameViewModel.selectTheme(theme: currentTheme)
                     gameViewModel.prepareGame()
                     navigationCoordinator.appendToPath(.nameReveal)
                 }

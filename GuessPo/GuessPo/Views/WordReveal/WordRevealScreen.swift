@@ -20,7 +20,7 @@ struct WordRevealScreen: View {
         if playerIsImposter {
             return "Impostor"
         }
-        return "word"
+        return gameViewModel.selectedWord!
     }
 
     var wordTextPreview: String {
@@ -36,7 +36,7 @@ struct WordRevealScreen: View {
 
             Spacer()
 
-            Text(gameViewModel.currentPlayer!.name)
+            Text(gameViewModel.currentPlayer?.name ?? "Começando!")
                 .font(.guessPoTitan(48))
                 .foregroundStyle(.guessPoDarkBlue)
             
@@ -59,6 +59,7 @@ struct WordRevealScreen: View {
             Spacer()
             
             PrimaryButton(title: "Entendido!") {
+                gameViewModel.currentPlayer = gameViewModel.popPlayerList()
                 _ = navigationCoordinator.popPath()
             }
             .frame(height: 48)

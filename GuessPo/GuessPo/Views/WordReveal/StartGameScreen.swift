@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartGameScreen: View {
+    @Binding var navigationCoordinator: NavigationCoordinator
     
     var body: some View {
 
@@ -32,7 +33,7 @@ struct StartGameScreen: View {
             Spacer()
             
             PrimaryButton(title: "Entendido!") {
-                // Não sei o que faz
+                navigationCoordinator.appendToPath(.home)
             }
             .frame(height: 44)
             .padding(.bottom, 32)
@@ -45,5 +46,5 @@ struct StartGameScreen: View {
 }
 
 #Preview {
-    StartGameScreen()
+    StartGameScreen(navigationCoordinator: .constant(.init()))
 }

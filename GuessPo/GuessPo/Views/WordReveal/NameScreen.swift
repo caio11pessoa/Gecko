@@ -13,34 +13,38 @@ struct NameScreen: View {
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("Passe o celular para:")
-                    .font(.guessPoTitan(.title3))
+        if let player = gameViewModel.currentPlayer {
+            VStack {
+                HStack {
+                    Text("Passe o celular para:")
+                        .font(.guessPoTitan(.title3))
+                    Spacer()
+                }
+                
                 Spacer()
+                
+                nameLabel(player: player)
+                
+                Spacer()
+                
+                PrimaryButton(title: "Eu sou o \(gameViewModel.currentPlayer!.name)") {
+                    navigationCoordinator.appendToPath(.wordReveal)
+                }
+                .frame(height: 48)
             }
-            
-            Spacer()
-            
-            nameLabel
-            
-            Spacer()
-
-            PrimaryButton(title: "Eu sou o \(gameViewModel.currentPlayer!.name)") {
-                navigationCoordinator.appendToPath(.wordReveal)
-            }
-            .frame(height: 48)
+            .foregroundStyle(.guessPoDarkBlue)
+            .padding(.horizontal, 20)
+        } else {
+            StartGameScreen()
         }
-        .foregroundStyle(.guessPoDarkBlue)
-        .padding(.horizontal, 20)
     }
     
-    var nameLabel: some View {
+    func nameLabel(player: Player?) -> some View {
         VStack {
             Image(systemName: "eyes")
                 .font(.custom("default", size: 120))
             
-            Text("\(gameViewModel.currentPlayer!.name)")
+            Text("\(player!.name)")
                 .font(.guessPoTitan(48))
         }
     }
