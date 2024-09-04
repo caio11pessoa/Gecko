@@ -77,7 +77,7 @@ struct HomeView: View {
                 NameScreen(navigationCoordinator: $navigationCoordinator, wordsViewModel: $wordsViewModel)
             case .wordReveal:
                 // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                WordRevealScreen(navigationCoordinator: $navigationCoordinator, tema: <#T##String#>)
+                WordRevealScreen(navigationCoordinator: $navigationCoordinator, tema: "")
             }
         }
     }

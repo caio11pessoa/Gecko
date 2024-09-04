@@ -11,12 +11,13 @@ import Foundation
 class WordAtributionViewModel {
     
     var players: [Player] = []
-    var currentPlayer: Player
     
-    var impostor: Player
+    var currentPlayer: Player?
+    var imposter: Player?
     
     var selectedTheme: Theme?
     var selectedWord: String?
+    
     
     func addPlayer(playerName: String) {
         let newPlayer = Player(name: playerName)
@@ -28,18 +29,54 @@ class WordAtributionViewModel {
         players.popLast()
     }
     
+    func generateWord() -> String? {
+        return self.selectedTheme?.wordList.randomElement()
+    }
+    
+    func randomizeImposter() -> Player? {
+        return players.randomElement()
+    }
+    
     func selectTheme(theme: Theme) {
         self.selectedTheme = theme
     }
     
-    func generateWord() /* Necessario tratamento de erro */ {
-        guard let selectedTheme = self.selectedTheme else {
+    func prepareGame() /* Necessario tratamento de erro */ {
+        /*
+        Esta funçao vai chamar e checar todo o necessario para o jogo funcionar, incluindo:
+         - 2+ Jogadores
+         - 1 Jogador selecionado
+         - 1 Jogador impostor
+         - 1 tema selecionado
+         - 1 palavra selecionada no tema
             
+        Deverá jogar um erro caso algum desses processos falhe.
+        */
+        
+        if players.count <= 2 {
+            // throw
+            return
         }
-        guard let selectedWord = selectedTheme.wordList.randomElement() else {
-            
+        
+        guard let currentPlayer = self.popPlayerList() else {
+            // throw
+            return
         }
+        guard let imposter = self.randomizeImposter() else {
+            // throw
+            return
+        }
+        guard let currentTheme = self.selectedTheme else {
+            // throw
+            return
+        }
+        guard let selectedWord = self.generateWord() else {
+            // throw
+            return
+        }
+        
+        self.currentPlayer = currentPlayer
+        self.imposter = imposter
         self.selectedWord = selectedWord
     }
-    
 }
