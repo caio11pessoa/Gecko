@@ -10,10 +10,9 @@ import SwiftUI
 struct HomeView: View {
     @State var navigationCoordinator = NavigationCoordinator()
     
+    @State var wordsViewModel = WordAtributionViewModel()
+    
     @State var newPlayer: String = ""
-    @State var players: [String] = [
-        "Pedro","Ian", "Lais", "Caio", "Julia", "Joao"
-    ]
     
     var body: some View {
         
@@ -75,7 +74,7 @@ struct HomeView: View {
                 HomeView()
             case .nameReveal:
                 // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                NameScreen(navigationCoordinator: $navigationCoordinator, player: <#T##Player#>)
+                NameScreen(navigationCoordinator: $navigationCoordinator)
             case .wordReveal:
                 // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
                 WordRevealScreen(navigationCoordinator: $navigationCoordinator, player: <#T##Player#>, tema: <#T##String#>)
@@ -123,9 +122,9 @@ struct HomeView: View {
             .foregroundStyle(.white)
             .overlay {
                 
-                List(players, id: \.self) { player in
+                List(wordsViewModel.players, id: \.self) { player in
                     
-                    Text(player)
+                    Text(player.name)
                         .font(.guessPoTitan(.callout))
                         .listRowBackground(Color.clear)
                     
@@ -134,6 +133,13 @@ struct HomeView: View {
                 .scrollContentBackground(.hidden)
                 
             }
+    }
+    
+    
+    func addNewPlayer() {
+        wordsViewModel.addPlayer(playerName: newPlayer)
+        
+        newPlayer = ""
     }
 }
 

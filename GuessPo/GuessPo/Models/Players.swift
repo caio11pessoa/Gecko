@@ -7,11 +7,7 @@
 
 import Foundation
 
-enum roles {
-case imposter, person
-}
-
-struct Player {
+struct Player: Identifiable, Hashable {
+    var id: UUID = UUID()
     var name: String
-    var role: roles
 }

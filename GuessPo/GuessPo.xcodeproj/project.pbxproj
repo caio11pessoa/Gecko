@@ -12,7 +12,6 @@
 		3432151E2C825BD200D37B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3432151D2C825BD200D37B66 /* Assets.xcassets */; };
 		343215212C825BD200D37B66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343215202C825BD200D37B66 /* Preview Assets.xcassets */; };
 		34D493762C856CE100B661EC /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493752C856CE100B661EC /* Players.swift */; };
-		34D493792C856D3F00B661EC /* GuessPoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493782C856D3F00B661EC /* GuessPoViewModel.swift */; };
 		34D4937D2C856D8600B661EC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937C2C856D8600B661EC /* Components.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
 		34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */; };
@@ -27,6 +26,8 @@
 		DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3912C8674D000B83743 /* NameScreen.swift */; };
 		DD53E3982C87E1FD00B83743 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3972C87E1FD00B83743 /* Routes.swift */; };
 		DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */; };
+		DD53E39C2C88BED900B83743 /* WordAtributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E39B2C88BED900B83743 /* WordAtributionViewModel.swift */; };
+		DD53E39E2C88C37A00B83743 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E39D2C88C37A00B83743 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,6 @@
 		3432151D2C825BD200D37B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343215202C825BD200D37B66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34D493752C856CE100B661EC /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
-		34D493782C856D3F00B661EC /* GuessPoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoViewModel.swift; sourceTree = "<group>"; };
 		34D4937C2C856D8600B661EC /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -52,6 +52,8 @@
 		DD53E3912C8674D000B83743 /* NameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameScreen.swift; sourceTree = "<group>"; };
 		DD53E3972C87E1FD00B83743 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		DD53E39B2C88BED900B83743 /* WordAtributionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAtributionViewModel.swift; sourceTree = "<group>"; };
+		DD53E39D2C88C37A00B83743 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				34D493752C856CE100B661EC /* Players.swift */,
+				DD53E39D2C88C37A00B83743 /* Theme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,9 +120,9 @@
 		34D493772C856D1F00B661EC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				34D493782C856D3F00B661EC /* GuessPoViewModel.swift */,
 				DD53E3972C87E1FD00B83743 /* Routes.swift */,
 				DD53E3992C87E22C00B83743 /* NavigationCoordinator.swift */,
+				DD53E39B2C88BED900B83743 /* WordAtributionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -244,15 +247,16 @@
 				3432151C2C825BD100D37B66 /* ContentView.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */,
+				DD53E39C2C88BED900B83743 /* WordAtributionViewModel.swift in Sources */,
 				DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */,
 				DD53E3982C87E1FD00B83743 /* Routes.swift in Sources */,
 				34D493842C86AA5C00B661EC /* WordRevealScreen.swift in Sources */,
 				364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */,
+				DD53E39E2C88C37A00B83743 /* Theme.swift in Sources */,
 				DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */,
 				34D4937D2C856D8600B661EC /* Components.swift in Sources */,
 				34D4937F2C856D9500B661EC /* HomeView.swift in Sources */,
 				3432151A2C825BD100D37B66 /* GuessPoApp.swift in Sources */,
-				34D493792C856D3F00B661EC /* GuessPoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
