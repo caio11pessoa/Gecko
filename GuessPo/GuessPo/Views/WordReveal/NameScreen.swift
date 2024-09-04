@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NameScreen: View {
     @Binding var navigationCoordinator: NavigationCoordinator
-
+    
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
@@ -35,7 +35,7 @@ struct NameScreen: View {
             .foregroundStyle(.guessPoDarkBlue)
             .padding(.horizontal, 20)
         } else {
-            StartGameScreen()
+            StartGameScreen(navigationCoordinator: $navigationCoordinator)
         }
     }
     
