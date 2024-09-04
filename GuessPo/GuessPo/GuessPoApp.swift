@@ -11,7 +11,7 @@ import SwiftUI
 struct GuessPoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

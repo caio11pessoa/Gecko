@@ -68,19 +68,19 @@ struct HomeView: View {
             .scenePadding(.horizontal)
             .background(.guessPoGray)
             
-        }
-        .navigationDestination(for: Routes.self) { route in
-            switch route {
-            case .home:
-                HomeView()
-            case .themeSelect:
-                ThemeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
-            case .nameReveal:
-                // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                NameScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
-            case .wordReveal:
-                // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                WordRevealScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+            .navigationDestination(for: Routes.self) { route in
+                switch route {
+                case .home:
+                    HomeView()
+                case .themeSelect:
+                    ThemeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .nameReveal:
+                    // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
+                    NameScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .wordReveal:
+                    // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
+                    WordRevealScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                }
             }
         }
     }

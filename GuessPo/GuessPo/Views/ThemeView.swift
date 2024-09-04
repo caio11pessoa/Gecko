@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Temporario
 fileprivate var themes: [Theme] = [
     .init(themeName: "Locais", themeSymbol: "map", wordList: ["Locais"]),
     .init(themeName: "Famosos", themeSymbol: "star.circle.fill", wordList: ["Famosos"]),
@@ -21,7 +22,7 @@ struct ThemeView: View {
     
     @Binding var gameViewModel: GameViewModel
     
-    // Tratar logica de carregar temas default
+    // Criar logica de carregar temas default
     @State var currentTheme: Theme = themes.first!
     
     let layout = Array(repeating: GridItem(.flexible()), count: 2)
@@ -40,7 +41,7 @@ struct ThemeView: View {
                 ScrollView {
                     LazyVGrid(columns: layout, content: {
                         ForEach(themes, id: \.self) { theme in
-                            ThemeButton(title: "\(theme.themeName)", symbol: theme.themeSymbol) {
+                            ThemeButton(title: "\(theme.themeName)", symbol: theme.themeSymbol, isSelected: currentTheme == theme) {
                                 currentTheme = theme
                             }
                             .frame(height: 150)
@@ -51,6 +52,7 @@ struct ThemeView: View {
                 
                 PrimaryButton(title: "Começar") {
                     gameViewModel.prepareGame()
+                    navigationCoordinator.appendToPath(.nameReveal)
                 }
                 .frame(width: 336, height: 48)
                 

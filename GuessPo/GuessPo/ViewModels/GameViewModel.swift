@@ -67,6 +67,7 @@ class GameViewModel {
             // throw
             return
         }
+        
         guard let imposter = self.randomizeImposter() else {
             // throw
             return
