@@ -9,7 +9,7 @@ import SwiftUI
 
 @Observable
 class NavigationCoordinator {
-    var path: [Routes] = [.home]
+    var path: [Routes] = []
     
     func appendToPath(_ route: Routes) {
         path.append(route)

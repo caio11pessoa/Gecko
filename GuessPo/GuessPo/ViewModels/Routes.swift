@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Routes: Hashable {
-case home, nameReveal, wordReveal
+case home, themeSelect, nameReveal, wordReveal
 }
 
 struct RoutesEnvironmentKey: EnvironmentKey {

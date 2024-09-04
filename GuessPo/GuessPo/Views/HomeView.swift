@@ -10,10 +10,9 @@ import SwiftUI
 struct HomeView: View {
     @State var navigationCoordinator = NavigationCoordinator()
     
+    @State var gameViewModel = GameViewModel()
+    
     @State var newPlayer: String = ""
-    @State var players: [String] = [
-        "Pedro","Ian", "Lais", "Caio", "Julia", "Joao"
-    ]
     
     var body: some View {
         
@@ -30,8 +29,9 @@ struct HomeView: View {
                 setTextField("Adicionar", text: $newPlayer)
                     .padding(.top, 8)
                 
-                PrimaryButton( title: "Adicionar") {
-                    // add novo jogador
+                PrimaryButton(title: "Adicionar") {
+                    gameViewModel.addPlayer(playerName: newPlayer)
+                    newPlayer = ""
                 }
                 .frame(height: 48)
                 .padding(.top, 16)
@@ -46,7 +46,7 @@ struct HomeView: View {
                     .padding(.top, 20)
                 
                 PrimaryButton( title: "Jogar" ) {
-                    navigationCoordinator.appendToPath(.nameReveal)
+                    navigationCoordinator.appendToPath(.themeSelect)
                 }
                 .frame(height: 48)
                 .padding(.top, 20)
@@ -68,17 +68,19 @@ struct HomeView: View {
             .scenePadding(.horizontal)
             .background(.guessPoGray)
             
-        }
-        .navigationDestination(for: Routes.self) { route in
-            switch route {
-            case .home:
-                HomeView()
-            case .nameReveal:
-                // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                NameScreen(navigationCoordinator: $navigationCoordinator, player: <#T##Player#>)
-            case .wordReveal:
-                // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                WordRevealScreen(navigationCoordinator: $navigationCoordinator, player: <#T##Player#>, tema: <#T##String#>)
+            .navigationDestination(for: Routes.self) { route in
+                switch route {
+                case .home:
+                    HomeView()
+                case .themeSelect:
+                    ThemeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .nameReveal:
+                    // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
+                    NameScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .wordReveal:
+                    // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
+                    WordRevealScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                }
             }
         }
     }
@@ -123,9 +125,9 @@ struct HomeView: View {
             .foregroundStyle(.white)
             .overlay {
                 
-                List(players, id: \.self) { player in
+                List(gameViewModel.players, id: \.self) { player in
                     
-                    Text(player)
+                    Text(player.name)
                         .font(.guessPoTitan(.callout))
                         .listRowBackground(Color.clear)
                     
@@ -134,6 +136,13 @@ struct HomeView: View {
                 .scrollContentBackground(.hidden)
                 
             }
+    }
+    
+    
+    func addNewPlayer() {
+        gameViewModel.addPlayer(playerName: newPlayer)
+        
+        newPlayer = ""
     }
 }
 

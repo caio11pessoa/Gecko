@@ -11,8 +11,9 @@ struct ThemeButton: View {
     
     @State var title: String
     @State var symbol : String
+    var isSelected: Bool
     @State var buttonAction: () -> Void
-    @State var isSelected: Bool = false
+    
     
     var body: some View {
         Button(action: buttonAction) {
@@ -36,15 +37,12 @@ struct ThemeButton: View {
                             .font(.guessPoTitan(20))
                     }
                 }
-                .onTapGesture {
-                    isSelected.toggle()
-                }
         }
     }
 }
 
 #Preview {
-    ThemeButton(title: "Marcos", symbol: "trash.fill", buttonAction: {
+    ThemeButton(title: "Marcos", symbol: "trash.fill", isSelected: false, buttonAction: {
         //
     })
     .padding(.horizontal, 50)

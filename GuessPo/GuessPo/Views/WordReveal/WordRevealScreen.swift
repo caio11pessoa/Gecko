@@ -10,19 +10,21 @@ import SwiftUI
 struct WordRevealScreen: View {
     @Binding var navigationCoordinator: NavigationCoordinator
 
-    var player: Player = .init(name: "Pedro", role: .imposter)
-
-    var tema: String = "Famosos"
+    @Binding var gameViewModel: GameViewModel
+    
+    var playerIsImposter: Bool {
+        gameViewModel.currentPlayer == gameViewModel.imposter
+    }
 
     var word: String {
-        if player.role == .imposter {
+        if playerIsImposter {
             return "Impostor"
         }
-        return "word"
+        return gameViewModel.selectedWord!
     }
 
     var wordTextPreview: String {
-        if player.role == .imposter {
+        if playerIsImposter {
             return "Se prepare, pois você é:"
         }
         return "A palavra da rodada é:"
@@ -34,7 +36,7 @@ struct WordRevealScreen: View {
 
             Spacer()
 
-            Text(player.name)
+            Text(gameViewModel.currentPlayer?.name ?? "Começando!")
                 .font(.guessPoTitan(48))
                 .foregroundStyle(.guessPoDarkBlue)
             
@@ -44,7 +46,7 @@ struct WordRevealScreen: View {
                 .fontDesign(.rounded)
                 .padding(.top, 18)
             
-            WordRevealTag(title: word, isImpostor: player.role == .imposter)
+            WordRevealTag(title: word, isImpostor: playerIsImposter)
                 .frame(height: 54)
                 .padding(.top, 18)
             
@@ -57,6 +59,7 @@ struct WordRevealScreen: View {
             Spacer()
             
             PrimaryButton(title: "Entendido!") {
+                gameViewModel.currentPlayer = gameViewModel.popPlayerList()
                 _ = navigationCoordinator.popPath()
             }
             .frame(height: 48)
@@ -72,18 +75,14 @@ struct WordRevealScreen: View {
 
         Group {
 
-            switch player.role {
-            case .imposter:
-
+            if playerIsImposter {
                 Text("O tema da rodada é ")
                 +
-                Text(tema)
+                Text(gameViewModel.selectedTheme!.themeName)
                     .foregroundStyle(.blue)
                 +
                 Text(", agora é só fingir que sabe qual é a palavra.")
-
-            case .person:
-
+            } else {
                 Text("Todo mundo vai receber essa mesma palavra, exceto o ")
                 +
                 Text("impostor.")
@@ -96,5 +95,5 @@ struct WordRevealScreen: View {
 }
 
 #Preview {
-    WordRevealScreen(navigationCoordinator: .constant(.init()))
+    WordRevealScreen(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
 }
