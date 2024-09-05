@@ -11,18 +11,48 @@ import Foundation
 class GameViewModel {
     
     var players: [Player] = []
-    
-    var currentPlayer: Player?
+
+    var currentPlayer: Player? {
+        if !isLastPlayer {
+            return players[currentPlayerIndex]
+        }
+        return nil
+    }
+
     var imposter: Player?
     
+    var isLastPlayer: Bool = false
+
     var selectedTheme: Theme?
     var selectedWord: String?
     
+    var newPlayerName: String = ""
     
-    func addPlayer(playerName: String) {
-        let newPlayer = Player(name: playerName)
+    private var currentPlayerIndex: Int = 0
+    
+    func nextPlayer(){
+        if currentPlayerIndex == players.count - 1{
+            isLastPlayer = true
+        } else {
+            currentPlayerIndex += 1
+            isLastPlayer = false
+        }
+    }
+    
+    func addPlayer() {
+        let newPlayer = Player(name: newPlayerName)
         
         self.players.append(newPlayer)
+
+        newPlayerName = ""
+    }
+    func deletePlayer(_ player: Player) {
+
+        guard let playerIndex: Int = players.firstIndex(of: player) else {
+            return
+        }
+        self.players.remove(at: playerIndex)
+
     }
     
     func popPlayerList() -> Player? {
@@ -63,10 +93,10 @@ class GameViewModel {
             return
         }
         
-        guard let currentPlayer = self.popPlayerList() else {
-            // throw
-            return
-        }
+//        guard let currentPlayer = self.popPlayerList() else {
+//            // throw
+//            return
+//        }
         
         guard let imposter = self.randomizeImposter() else {
             // throw
@@ -78,7 +108,7 @@ class GameViewModel {
             return
         }
         
-        self.currentPlayer = currentPlayer
+        self.currentPlayerIndex = 0
         self.imposter = imposter
         self.selectedWord = selectedWord
     }

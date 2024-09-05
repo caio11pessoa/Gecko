@@ -12,8 +12,6 @@ struct HomeView: View {
     
     @State var gameViewModel = GameViewModel()
     
-    @State var newPlayer: String = ""
-    
     var body: some View {
         
         NavigationStack(path: $navigationCoordinator.path) {
@@ -26,12 +24,11 @@ struct HomeView: View {
                 setSubTitle(text: "Adicione aqui os novos jogadores:")
                     .padding(.top, 4)
                 
-                setTextField("Adicionar", text: $newPlayer)
+                setTextField("Adicionar", text: $gameViewModel.newPlayerName)
                     .padding(.top, 8)
                 
                 PrimaryButton(title: "Adicionar") {
-                    gameViewModel.addPlayer(playerName: newPlayer)
-                    newPlayer = ""
+                    gameViewModel.addPlayer()
                 }
                 .frame(height: 48)
                 .padding(.top, 16)
@@ -126,23 +123,28 @@ struct HomeView: View {
             .overlay {
                 
                 List(gameViewModel.players, id: \.self) { player in
-                    
-                    Text(player.name)
-                        .font(.guessPoTitan(.callout))
-                        .listRowBackground(Color.clear)
+                    HStack{
+                        Text(player.name)
+                            .font(.guessPoTitan(.callout))
+                        
+                        Spacer()
+                        
+                        Image(systemName: "x.circle")
+                            .font(.system(size: 16))
+                            .foregroundStyle(Color(red: 179/255, green: 179/255, blue: 179/255 ))
+                            .onTapGesture {
+                                
+                                gameViewModel.deletePlayer(player)
+                                
+                            }
+                    }
+                    .listRowBackground(Color.clear)
                     
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
                 
             }
-    }
-    
-    
-    func addNewPlayer() {
-        gameViewModel.addPlayer(playerName: newPlayer)
-        
-        newPlayer = ""
     }
 }
 

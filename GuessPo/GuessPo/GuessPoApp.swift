@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct GuessPoApp: App {
+    @State var viewModel: GameViewModel = GameViewModel()
     var body: some Scene {
         WindowGroup {
             HomeView()
