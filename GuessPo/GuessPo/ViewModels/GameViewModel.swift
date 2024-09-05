@@ -18,11 +18,14 @@ class GameViewModel {
     var selectedTheme: Theme?
     var selectedWord: String?
     
+    var newPlayerName: String = ""
     
-    func addPlayer(playerName: String) {
-        let newPlayer = Player(name: playerName)
+    func addPlayer() {
+        let newPlayer = Player(name: newPlayerName)
         
         self.players.append(newPlayer)
+
+        newPlayerName = ""
     }
     func deletePlayer(_ player: Player) {
 
