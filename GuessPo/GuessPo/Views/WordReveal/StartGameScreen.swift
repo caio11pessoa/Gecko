@@ -11,11 +11,11 @@ struct StartGameScreen: View {
     @Binding var navigationCoordinator: NavigationCoordinator
     
     var body: some View {
-
+        
         VStack(spacing: 0) {
             
             Spacer()
-
+            
             Image(systemName: "person.fill.questionmark")
                 .font(.system(size: 120))
                 .foregroundStyle(.guessPoDarkBlue)
@@ -32,16 +32,22 @@ struct StartGameScreen: View {
             
             Spacer()
             
-            PrimaryButton(title: "Entendido!") {
+            PrimaryButton(title: "Nova Rodada!") {
+                navigationCoordinator.goToRoot()
+            }
+            .frame(height: 44)
+            
+            SecondButton(title: "voltar ao Início") {
                 navigationCoordinator.goToRoot()
             }
             .frame(height: 44)
             .padding(.bottom, 32)
-
+            .padding(.top, 8)
+            
         }
         .padding(.horizontal, 26)
         .ignoresSafeArea()
-
+        
     }
 }
 
