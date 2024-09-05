@@ -11,6 +11,13 @@
 		3432151E2C825BD200D37B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3432151D2C825BD200D37B66 /* Assets.xcassets */; };
 		343215212C825BD200D37B66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343215202C825BD200D37B66 /* Preview Assets.xcassets */; };
 		34457C822C8A0F2B00AD0C22 /* SecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34457C812C8A0F2B00AD0C22 /* SecondButton.swift */; };
+		34457C852C8A28DA00AD0C22 /* Places.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C842C8A28DA00AD0C22 /* Places.json */; };
+		34457C872C8A296700AD0C22 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34457C862C8A296700AD0C22 /* JSONManager.swift */; };
+		34457C892C8A2F6A00AD0C22 /* JsonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34457C882C8A2F6A00AD0C22 /* JsonModels.swift */; };
+		34457C8B2C8A300D00AD0C22 /* Famous.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C8A2C8A300D00AD0C22 /* Famous.json */; };
+		34457C8F2C8A3B2100AD0C22 /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C8E2C8A3B2100AD0C22 /* Animals.json */; };
+		34457C912C8A3B8300AD0C22 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C902C8A3B8300AD0C22 /* Characters.json */; };
+		34457C952C8A3C4D00AD0C22 /* Foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C942C8A3C4D00AD0C22 /* Foods.json */; };
 		34D493762C856CE100B661EC /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493752C856CE100B661EC /* Players.swift */; };
 		34D4937D2C856D8600B661EC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937C2C856D8600B661EC /* Components.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
@@ -36,6 +43,13 @@
 		3432151D2C825BD200D37B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343215202C825BD200D37B66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34457C812C8A0F2B00AD0C22 /* SecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondButton.swift; sourceTree = "<group>"; };
+		34457C842C8A28DA00AD0C22 /* Places.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Places.json; sourceTree = "<group>"; };
+		34457C862C8A296700AD0C22 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		34457C882C8A2F6A00AD0C22 /* JsonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModels.swift; sourceTree = "<group>"; };
+		34457C8A2C8A300D00AD0C22 /* Famous.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Famous.json; sourceTree = "<group>"; };
+		34457C8E2C8A3B2100AD0C22 /* Animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Animals.json; sourceTree = "<group>"; };
+		34457C902C8A3B8300AD0C22 /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
+		34457C942C8A3C4D00AD0C22 /* Foods.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Foods.json; sourceTree = "<group>"; };
 		34D493752C856CE100B661EC /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		34D4937C2C856D8600B661EC /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -86,6 +100,7 @@
 		343215182C825BD100D37B66 /* GuessPo */ = {
 			isa = PBXGroup;
 			children = (
+				34457C832C8A28A700AD0C22 /* Datas */,
 				DD53E38C2C860E2F00B83743 /* Info.plist */,
 				34D4937B2C856D7100B661EC /* Components */,
 				34D4937A2C856D6100B661EC /* Views */,
@@ -107,11 +122,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		34457C832C8A28A700AD0C22 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				34457C842C8A28DA00AD0C22 /* Places.json */,
+				34457C8A2C8A300D00AD0C22 /* Famous.json */,
+				34457C8E2C8A3B2100AD0C22 /* Animals.json */,
+				34457C902C8A3B8300AD0C22 /* Characters.json */,
+				34457C942C8A3C4D00AD0C22 /* Foods.json */,
+				34457C862C8A296700AD0C22 /* JSONManager.swift */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
 		34D493742C856CC400B661EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				34D493752C856CE100B661EC /* Players.swift */,
 				DD53E39D2C88C37A00B83743 /* Theme.swift */,
+				34457C882C8A2F6A00AD0C22 /* JsonModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,7 +257,12 @@
 			files = (
 				343215212C825BD200D37B66 /* Preview Assets.xcassets in Resources */,
 				DD53E38B2C860DDE00B83743 /* TitanOne-Regular.ttf in Resources */,
+				34457C912C8A3B8300AD0C22 /* Characters.json in Resources */,
 				3432151E2C825BD200D37B66 /* Assets.xcassets in Resources */,
+				34457C8F2C8A3B2100AD0C22 /* Animals.json in Resources */,
+				34457C952C8A3C4D00AD0C22 /* Foods.json in Resources */,
+				34457C852C8A28DA00AD0C22 /* Places.json in Resources */,
+				34457C8B2C8A300D00AD0C22 /* Famous.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D493862C86C9D400B661EC /* StartGameScreen.swift in Sources */,
+				34457C892C8A2F6A00AD0C22 /* JsonModels.swift in Sources */,
 				36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */,
 				C8C026362C864E8900FB2C66 /* ThemeView.swift in Sources */,
 				34D493762C856CE100B661EC /* Players.swift in Sources */,
@@ -250,6 +285,7 @@
 				DD53E39C2C88BED900B83743 /* GameViewModel.swift in Sources */,
 				DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */,
 				DD53E3982C87E1FD00B83743 /* Routes.swift in Sources */,
+				34457C872C8A296700AD0C22 /* JSONManager.swift in Sources */,
 				34D493842C86AA5C00B661EC /* WordRevealScreen.swift in Sources */,
 				364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */,
 				DD53E39E2C88C37A00B83743 /* Theme.swift in Sources */,
