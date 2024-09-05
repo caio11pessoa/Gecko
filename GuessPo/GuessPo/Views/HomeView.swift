@@ -126,10 +126,15 @@ struct HomeView: View {
             .overlay {
                 
                 List(gameViewModel.players, id: \.self) { player in
-                    
-                    Text(player.name)
-                        .font(.guessPoTitan(.callout))
-                        .listRowBackground(Color.clear)
+                    HStack{
+                        Text(player.name)
+                            .font(.guessPoTitan(.callout))
+                        Spacer()
+                        Image(systemName: "x.circle")
+                            .font(.system(size: 16))
+                            .foregroundStyle(Color(red: 179/255, green: 179/255, blue: 179/255 ))
+                    }
+                    .listRowBackground(Color.clear)
                     
                 }
                 .listStyle(.plain)
