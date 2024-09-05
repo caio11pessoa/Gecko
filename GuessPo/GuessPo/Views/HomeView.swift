@@ -129,10 +129,17 @@ struct HomeView: View {
                     HStack{
                         Text(player.name)
                             .font(.guessPoTitan(.callout))
+                        
                         Spacer()
+                        
                         Image(systemName: "x.circle")
                             .font(.system(size: 16))
                             .foregroundStyle(Color(red: 179/255, green: 179/255, blue: 179/255 ))
+                            .onTapGesture {
+                                
+                                gameViewModel.deletePlayer(player)
+                                
+                            }
                     }
                     .listRowBackground(Color.clear)
                     

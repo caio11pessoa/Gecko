@@ -24,6 +24,14 @@ class GameViewModel {
         
         self.players.append(newPlayer)
     }
+    func deletePlayer(_ player: Player) {
+
+        guard let playerIndex: Int = players.firstIndex(of: player) else {
+            return
+        }
+        self.players.remove(at: playerIndex)
+
+    }
     
     func popPlayerList() -> Player? {
         players.popLast()
