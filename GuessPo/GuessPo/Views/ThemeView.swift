@@ -31,11 +31,13 @@ struct ThemeView: View {
             Color(.guessPoGray)
                 .ignoresSafeArea(.all)
             
-            VStack(alignment: .leading) {
-                Text("Escolha os temas")
+            VStack(alignment: .leading, spacing: 0) {
+                Text("Escolha os temas da rodada")
                     .font(.guessPoTitan(.title2))
                     .foregroundStyle(.guessPoDarkBlue)
-                Text("Escolha o tema da palavra misteriosa:")
+                    .padding(.top, 20)
+                Text("Selecione um ou mais dos temas abaixo:")
+                    .padding(.top, 4)
                 
                 ScrollView {
                     LazyVGrid(columns: layout, content: {
@@ -45,18 +47,23 @@ struct ThemeView: View {
                             }
                             .frame(height: 150)
                         }
-                    }).padding(8)
+                    })
+                    .padding(8)
                 }
                 .background(RoundedRectangle(cornerRadius: 15).foregroundStyle(.white))
+                .padding(.top, 14)
                 
                 PrimaryButton(title: "Começar") {
                     gameViewModel.selectTheme(theme: currentTheme)
                     gameViewModel.prepareGame()
                     navigationCoordinator.appendToPath(.nameReveal)
                 }
-                .frame(width: 336, height: 48)
+                .frame(height: 48)
+                .padding(.top, 14)
                 
-            }.padding()
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 18)
         }
     }
 }
