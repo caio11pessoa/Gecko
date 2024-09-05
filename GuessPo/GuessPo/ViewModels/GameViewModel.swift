@@ -11,7 +11,6 @@ import Foundation
 class GameViewModel {
     
     var players: [Player] = []
-    var currentPlayerIndex: Int = 0
 
     var currentPlayer: Player? {
         if !isLastPlayer {
@@ -22,14 +21,23 @@ class GameViewModel {
 
     var imposter: Player?
     
-    var isLastPlayer: Bool {
-        currentPlayerIndex == players.count
-    }
+    var isLastPlayer: Bool = false
 
     var selectedTheme: Theme?
     var selectedWord: String?
     
     var newPlayerName: String = ""
+    
+    private var currentPlayerIndex: Int = 0
+    
+    func nextPlayer(){
+        if currentPlayerIndex == players.count - 1{
+            isLastPlayer = true
+        } else {
+            currentPlayerIndex += 1
+            isLastPlayer = false
+        }
+    }
     
     func addPlayer() {
         let newPlayer = Player(name: newPlayerName)

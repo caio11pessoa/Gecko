@@ -59,7 +59,7 @@ struct WordRevealScreen: View {
             Spacer()
             
             PrimaryButton(title: "Entendido!") {
-                gameViewModel.currentPlayerIndex += 1
+                gameViewModel.nextPlayer()
                 _ = navigationCoordinator.popPath()
             }
             .frame(height: 48)
