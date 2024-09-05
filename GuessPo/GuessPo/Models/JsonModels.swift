@@ -16,4 +16,5 @@ enum Themes: String {
     case famous = "Famous"
     case animals = "Animals"
     case foods = "Foods"
+    case characters = "Characters"
 }
