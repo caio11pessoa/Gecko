@@ -13,7 +13,7 @@ struct NameScreen: View {
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
-        if let player = gameViewModel.currentPlayer {
+        if !gameViewModel.isLastPlayer {
             VStack {
                 HStack {
                     Text("Passe o celular para:")
@@ -23,7 +23,7 @@ struct NameScreen: View {
                 
                 Spacer()
                 
-                nameLabel(player: player)
+                nameLabel(player: gameViewModel.currentPlayer)
                 
                 Spacer()
                 

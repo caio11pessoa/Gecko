@@ -18,4 +18,8 @@ class NavigationCoordinator {
     func popPath() -> Routes? {
         return path.popLast()
     }
+    
+    func goToRoot() {
+        path.removeAll()
+    }
 }

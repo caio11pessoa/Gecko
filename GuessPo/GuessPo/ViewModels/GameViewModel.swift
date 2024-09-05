@@ -11,10 +11,21 @@ import Foundation
 class GameViewModel {
     
     var players: [Player] = []
-    
-    var currentPlayer: Player?
+    var currentPlayerIndex: Int = 0
+
+    var currentPlayer: Player? {
+        if !isLastPlayer {
+            return players[currentPlayerIndex]
+        }
+        return nil
+    }
+
     var imposter: Player?
     
+    var isLastPlayer: Bool {
+        currentPlayerIndex == players.count
+    }
+
     var selectedTheme: Theme?
     var selectedWord: String?
     
@@ -74,10 +85,10 @@ class GameViewModel {
             return
         }
         
-        guard let currentPlayer = self.popPlayerList() else {
-            // throw
-            return
-        }
+//        guard let currentPlayer = self.popPlayerList() else {
+//            // throw
+//            return
+//        }
         
         guard let imposter = self.randomizeImposter() else {
             // throw
@@ -89,7 +100,7 @@ class GameViewModel {
             return
         }
         
-        self.currentPlayer = currentPlayer
+        self.currentPlayerIndex = 0
         self.imposter = imposter
         self.selectedWord = selectedWord
     }

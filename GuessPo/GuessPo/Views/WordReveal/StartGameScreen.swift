@@ -33,7 +33,7 @@ struct StartGameScreen: View {
             Spacer()
             
             PrimaryButton(title: "Entendido!") {
-                navigationCoordinator.appendToPath(.home)
+                navigationCoordinator.goToRoot()
             }
             .frame(height: 44)
             .padding(.bottom, 32)
