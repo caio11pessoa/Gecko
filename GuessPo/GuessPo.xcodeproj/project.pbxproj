@@ -10,6 +10,7 @@
 		3432151A2C825BD100D37B66 /* GuessPoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343215192C825BD100D37B66 /* GuessPoApp.swift */; };
 		3432151E2C825BD200D37B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3432151D2C825BD200D37B66 /* Assets.xcassets */; };
 		343215212C825BD200D37B66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343215202C825BD200D37B66 /* Preview Assets.xcassets */; };
+		34457C822C8A0F2B00AD0C22 /* SecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34457C812C8A0F2B00AD0C22 /* SecondButton.swift */; };
 		34D493762C856CE100B661EC /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493752C856CE100B661EC /* Players.swift */; };
 		34D4937D2C856D8600B661EC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937C2C856D8600B661EC /* Components.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
@@ -34,6 +35,7 @@
 		343215192C825BD100D37B66 /* GuessPoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoApp.swift; sourceTree = "<group>"; };
 		3432151D2C825BD200D37B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343215202C825BD200D37B66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		34457C812C8A0F2B00AD0C22 /* SecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondButton.swift; sourceTree = "<group>"; };
 		34D493752C856CE100B661EC /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		34D4937C2C856D8600B661EC /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				34D4937C2C856D8600B661EC /* Components.swift */,
 				364EBCB62C861EE600258A61 /* ThemeButton.swift */,
 				36E300D32C8629EA00164504 /* PrimaryButton.swift */,
+				34457C812C8A0F2B00AD0C22 /* SecondButton.swift */,
 				36E300D52C862EEE00164504 /* WordRevealTag.swift */,
 				34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */,
 			);
@@ -243,6 +246,7 @@
 				34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */,
+				34457C822C8A0F2B00AD0C22 /* SecondButton.swift in Sources */,
 				DD53E39C2C88BED900B83743 /* GameViewModel.swift in Sources */,
 				DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */,
 				DD53E3982C87E1FD00B83743 /* Routes.swift in Sources */,
