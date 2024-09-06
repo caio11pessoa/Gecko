@@ -35,7 +35,6 @@ class GameViewModel {
             isLastPlayer = true
         } else {
             currentPlayerIndex += 1
-            isLastPlayer = false
         }
     }
     
@@ -109,6 +108,7 @@ class GameViewModel {
         }
         
         self.currentPlayerIndex = 0
+        self.isLastPlayer = false
         self.imposter = imposter
         self.selectedWord = selectedWord
     }
