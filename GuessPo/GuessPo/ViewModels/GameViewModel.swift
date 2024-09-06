@@ -58,8 +58,9 @@ class GameViewModel {
         players.popLast()
     }
     
-    func generateWord() -> String? {
-        return self.selectedTheme?.wordList.randomElement()
+    func generateWord(theme: Themes) -> String? {
+        let wordsInTheme = JSONManager.getWordsFor(theme: theme)
+        return wordsInTheme?.words.randomElement()
     }
     
     func randomizeImposter() -> Player? {
@@ -92,17 +93,12 @@ class GameViewModel {
             return
         }
         
-//        guard let currentPlayer = self.popPlayerList() else {
-//            // throw
-//            return
-//        }
-        
         guard let imposter = self.randomizeImposter() else {
             // throw
             return
         }
         
-        guard let selectedWord = self.generateWord() else {
+        guard let selectedWord = self.generateWord(theme: selectedTheme!.themeEnum) else {
             // throw
             return
         }

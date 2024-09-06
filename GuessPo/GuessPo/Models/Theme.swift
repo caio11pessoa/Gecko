@@ -12,4 +12,5 @@ struct Theme: Identifiable, Hashable {
     var themeName: String
     var themeSymbol: String
     var wordList: [String]
+    var themeEnum: Themes
 }

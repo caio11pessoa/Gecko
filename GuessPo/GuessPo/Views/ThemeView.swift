@@ -9,11 +9,11 @@ import SwiftUI
 
 // Temporario
 fileprivate var themes: [Theme] = [
-    .init(themeName: "Locais", themeSymbol: "map", wordList: ["Locais"]),
-    .init(themeName: "Famosos", themeSymbol: "star.circle.fill", wordList: ["Famosos"]),
-    .init(themeName: "Animais", themeSymbol: "dog.fill", wordList: ["Animais"]),
-    .init(themeName: "Personagens", themeSymbol: "movieclapper.fill", wordList: ["Personagens"]),
-    .init(themeName: "Comidas", themeSymbol: "bag", wordList: ["Comidas"])
+    .init(themeName: "Locais", themeSymbol: "map", wordList: ["Locais"], themeEnum: .places),
+    .init(themeName: "Famosos", themeSymbol: "star.circle.fill", wordList: ["Famosos"], themeEnum: .famous),
+    .init(themeName: "Animais", themeSymbol: "dog.fill", wordList: ["Animais"], themeEnum: .animals),
+    .init(themeName: "Personagens", themeSymbol: "movieclapper.fill", wordList: ["Personagens"], themeEnum: .characters),
+    .init(themeName: "Comidas", themeSymbol: "bag", wordList: ["Comidas"], themeEnum: .foods)
     ]
 
 struct ThemeView: View {
