@@ -11,25 +11,7 @@ struct WordRevealScreen: View {
     @Binding var navigationCoordinator: NavigationCoordinator
 
     @Binding var gameViewModel: GameViewModel
-    
-    var playerIsImposter: Bool {
-        gameViewModel.currentPlayer == gameViewModel.imposter
-    }
 
-    var word: String {
-        if playerIsImposter {
-            return "Impostor"
-        }
-        return gameViewModel.selectedWord!
-    }
-
-    var wordTextPreview: String {
-        if playerIsImposter {
-            return "Se prepare, pois você é:"
-        }
-        return "A palavra da rodada é:"
-        
-    }
     var body: some View {
 
         VStack(spacing: 0) {
@@ -40,13 +22,13 @@ struct WordRevealScreen: View {
                 .font(.guessPoTitan(48))
                 .foregroundStyle(.guessPoDarkBlue)
             
-            Text(wordTextPreview)
+            Text(gameViewModel.getWordTextPreview())
                 .font(.system(size: 16))
                 .bold()
                 .fontDesign(.rounded)
                 .padding(.top, 18)
             
-            WordRevealTag(title: word, isImpostor: playerIsImposter)
+            WordRevealTag(title: gameViewModel.getWord(), isImpostor: gameViewModel.playerIsImposter())
                 .frame(height: 54)
                 .padding(.top, 18)
             
@@ -75,10 +57,10 @@ struct WordRevealScreen: View {
 
         Group {
 
-            if playerIsImposter {
+            if gameViewModel.playerIsImposter() {
                 Text("O tema da rodada é ")
                 +
-                Text(gameViewModel.selectedTheme!.themeName)
+                Text(gameViewModel.selectedTheme?.themeName ?? "Tema Secreto")
                     .foregroundStyle(.blue)
                 +
                 Text(", agora é só fingir que sabe qual é a palavra.")
