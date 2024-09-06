@@ -43,7 +43,11 @@ struct HomeView: View {
                     .padding(.top, 20)
                 
                 PrimaryButton( title: "Jogar" ) {
-                    navigationCoordinator.appendToPath(.themeSelect)
+                    if gameViewModel.players.count < 3 {
+                        gameViewModel.showingAlert = true
+                    } else {
+                        navigationCoordinator.appendToPath(.themeSelect)
+                    }
                 }
                 .frame(height: 48)
                 .padding(.top, 20)
@@ -77,6 +81,11 @@ struct HomeView: View {
                 case .wordReveal:
                     // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
                     WordRevealScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                }
+            }
+            .alert("Jogadores insuficientes!", isPresented: $gameViewModel.showingAlert) {
+                Button("OK", role: .cancel) {
+                    gameViewModel.showingAlert = false
                 }
             }
         }
