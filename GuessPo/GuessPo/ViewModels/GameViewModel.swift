@@ -25,6 +25,7 @@ class GameViewModel {
 
     var selectedTheme: Theme?
     var selectedWord: String?
+    var showingAlert: Bool = false
     
     var newPlayerName: String = ""
     
@@ -71,17 +72,16 @@ class GameViewModel {
         self.selectedTheme = theme
     }
     
-    func prepareGame() /* Necessario tratamento de erro */ {
-        /*
-        Esta funçao vai chamar e checar todo o necessario para o jogo funcionar, incluindo:
-         - 2+ Jogadores
-         - 1 Jogador selecionado
-         - 1 Jogador impostor
-         - 1 tema selecionado
-         - 1 palavra selecionada no tema
-            
-        Deverá jogar um erro caso algum desses processos falhe.
-        */
+///    Esta funçao vai chamar e checar todo o necessario para o jogo funcionar, incluindo:
+///     - 2+ Jogadores
+///     - 1 Jogador selecionado
+///     - 1 Jogador impostor
+///     - 1 tema selecionado
+///     - 1 palavra selecionada no tema
+///
+///    Deverá jogar um erro caso algum desses processos falhe.
+    func prepareGame() {
+        //TODO: tratamento de erro
         
         if players.count <= 2 {
             // throw
