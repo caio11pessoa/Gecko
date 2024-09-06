@@ -33,7 +33,7 @@ struct StartGameScreen: View {
             Spacer()
             
             PrimaryButton(title: "Nova Rodada!") {
-                navigationCoordinator.goToRoot()
+                navigationCoordinator.popPath()
             }
             .frame(height: 44)
             
