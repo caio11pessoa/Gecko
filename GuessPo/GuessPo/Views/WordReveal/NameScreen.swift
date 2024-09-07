@@ -23,11 +23,14 @@ struct NameScreen: View {
                 
                 Spacer()
                 
-                nameLabel(player: gameViewModel.currentPlayer)
+                nameLabel(player: gameViewModel.currentPlayer == nil ? .init(name: "Jogador 1") : gameViewModel.currentPlayer)
                 
                 Spacer()
                 
-                PrimaryButton(title: "Eu sou o \(gameViewModel.currentPlayer!.name)") {
+                PrimaryButton(title: "Eu sou o \(gameViewModel.getCurrentPlayerName())") {
+                    guard let player = gameViewModel.currentPlayer else {
+                        return
+                    }
                     navigationCoordinator.appendToPath(.wordReveal)
                 }
                 .frame(height: 48)
@@ -44,7 +47,7 @@ struct NameScreen: View {
             Image(systemName: "eyes")
                 .font(.custom("default", size: 120))
             
-            Text("\(player!.name)")
+            Text(player?.name ?? "Jogador")
                 .font(.guessPoTitan(48))
         }
     }

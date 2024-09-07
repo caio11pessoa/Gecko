@@ -13,7 +13,7 @@ class GameViewModel {
     var players: [Player] = []
 
     var currentPlayer: Player? {
-        if !isLastPlayer {
+        if !isLastPlayer && currentPlayerIndex > 0{
             return players[currentPlayerIndex]
         }
         return nil
@@ -70,6 +70,31 @@ class GameViewModel {
     
     func selectTheme(theme: Theme) {
         self.selectedTheme = theme
+    }
+    
+    func getCurrentPlayerName() -> String {
+        return currentPlayer?.name ?? "Jogador 1"
+    }
+    
+    func playerIsImposter() -> Bool {
+        guard let currentPlayer = currentPlayer, let imposter = imposter else {
+            return false
+        }
+        return currentPlayer == imposter
+    }
+    
+    func getWord() -> String {
+        if playerIsImposter() {
+            return "Impostor"
+        }
+        return selectedWord ?? "Palavra Secreta"
+    }
+    
+    func getWordTextPreview() -> String {
+        if playerIsImposter() {
+            return "Se prepare, pois você é:"
+        }
+        return "A palavra da rodada é:"
     }
     
 ///    Esta funçao vai chamar e checar todo o necessario para o jogo funcionar, incluindo:
