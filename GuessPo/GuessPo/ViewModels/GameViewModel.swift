@@ -13,7 +13,7 @@ class GameViewModel {
     var players: [Player] = []
 
     var currentPlayer: Player? {
-        if !isLastPlayer && currentPlayerIndex > 0{
+        if !isLastPlayer && currentPlayerIndex < players.count{
             return players[currentPlayerIndex]
         }
         return nil
