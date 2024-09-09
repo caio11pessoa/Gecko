@@ -41,6 +41,7 @@ struct HomeView: View {
                 
                 playerList
                     .padding(.top, 20)
+                    .frame(height: 200)
                 
                 PrimaryButton( title: "Jogar" ) {
                     if gameViewModel.players.count < 3 {
