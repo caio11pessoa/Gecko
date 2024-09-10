@@ -13,47 +13,41 @@ struct NameScreen: View {
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
-//        ZStack {
-                VStack {
-                    HStack {
-                        Text("Passe o celular para:")
-                            .font(.guessPoTitan(.title3))
-                        Spacer()
-                    }
-                    
+            VStack {
+                HStack {
+                    Text("Passe o celular para:")
+                        .font(.guessPoTitan(.title3))
                     Spacer()
-                    
-                    nameLabel(player: gameViewModel.currentPlayer)
-                    
-                    Spacer()
-                    PrimaryButton(title: "Eu sou o \(gameViewModel.currentPlayer!.name)") {
-                        navigationCoordinator.appendToPath(.wordReveal)
+                }
+                
+                Spacer()
+                
+                nameLabel(player: gameViewModel.currentPlayer == nil ? .init(name: "Jogador 1") : gameViewModel.currentPlayer)
+                
+                Spacer()
+                
+                PrimaryButton(title: "Eu sou o \(gameViewModel.getCurrentPlayerName())") {
+                    guard let player = gameViewModel.currentPlayer else {
+                        return
                     }
-                    .frame(height: 48)
+                    navigationCoordinator.appendToPath(.wordReveal)
                 }
-                .foregroundStyle(.guessPoDarkBlue)
-                .padding(.horizontal, 20)
-//        }
-        .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                BackButton() {
-                    _ = navigationCoordinator.popPath()
-                }
+                .frame(height: 48)
             }
-        }
+            .foregroundStyle(.guessPoDarkBlue)
+            .padding(.horizontal, 20)
     }
-}
-
+    
     func nameLabel(player: Player?) -> some View {
         VStack {
             Image(systemName: "eyes")
                 .font(.custom("default", size: 120))
             
-            Text("\(player!.name)")
+            Text(player?.name ?? "Jogador")
                 .font(.guessPoTitan(48))
         }
     }
+}
 
 #Preview {
     NavigationStack {
