@@ -13,32 +13,38 @@ struct NameScreen: View {
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
-        if !gameViewModel.isLastPlayer {
-            VStack {
-                HStack {
-                    Text("Passe o celular para:")
-                        .font(.guessPoTitan(.title3))
+//        ZStack {
+                VStack {
+                    HStack {
+                        Text("Passe o celular para:")
+                            .font(.guessPoTitan(.title3))
+                        Spacer()
+                    }
+                    
                     Spacer()
+                    
+                    nameLabel(player: gameViewModel.currentPlayer)
+                    
+                    Spacer()
+                    PrimaryButton(title: "Eu sou o \(gameViewModel.currentPlayer!.name)") {
+                        navigationCoordinator.appendToPath(.wordReveal)
+                    }
+                    .frame(height: 48)
                 }
-                
-                Spacer()
-                
-                nameLabel(player: gameViewModel.currentPlayer)
-                
-                Spacer()
-                
-                PrimaryButton(title: "Eu sou o \(gameViewModel.currentPlayer!.name)") {
-                    navigationCoordinator.appendToPath(.wordReveal)
+                .foregroundStyle(.guessPoDarkBlue)
+                .padding(.horizontal, 20)
+//        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                BackButton() {
+                    _ = navigationCoordinator.popPath()
                 }
-                .frame(height: 48)
             }
-            .foregroundStyle(.guessPoDarkBlue)
-            .padding(.horizontal, 20)
-        } else {
-            StartGameScreen(navigationCoordinator: $navigationCoordinator)
         }
     }
-    
+}
+
     func nameLabel(player: Player?) -> some View {
         VStack {
             Image(systemName: "eyes")
@@ -48,8 +54,14 @@ struct NameScreen: View {
                 .font(.guessPoTitan(48))
         }
     }
-}
 
 #Preview {
-    NameScreen(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
+    NavigationStack {
+        NavigationLink {
+            NameScreen(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
+            
+        } label: {
+            Text("Teste")
+        }
+    }
 }

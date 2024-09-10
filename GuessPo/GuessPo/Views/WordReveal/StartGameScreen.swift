@@ -11,7 +11,6 @@ struct StartGameScreen: View {
     @Binding var navigationCoordinator: NavigationCoordinator
     
     var body: some View {
-        
         VStack(spacing: 0) {
             
             Spacer()
@@ -33,7 +32,7 @@ struct StartGameScreen: View {
             Spacer()
             
             PrimaryButton(title: "Nova Rodada!") {
-                navigationCoordinator.popPath()
+                navigationCoordinator.goToThemeSelect()
             }
             .frame(height: 44)
             
@@ -47,7 +46,7 @@ struct StartGameScreen: View {
         }
         .padding(.horizontal, 26)
         .ignoresSafeArea()
-        
+        .navigationBarBackButtonHidden()
     }
 }
 

@@ -81,6 +81,8 @@ struct HomeView: View {
                 case .wordReveal:
                     // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
                     WordRevealScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .gameStart:
+                    StartGameScreen(navigationCoordinator: $navigationCoordinator)
                 }
             }
             .alert("Jogadores insuficientes!", isPresented: $gameViewModel.showingAlert) {
