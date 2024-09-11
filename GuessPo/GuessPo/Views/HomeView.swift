@@ -32,6 +32,11 @@ struct HomeView: View {
                 }
                 .frame(height: 48)
                 .padding(.top, 16)
+                .alert("Necessário pelo menos 2 caracteres!", isPresented: $gameViewModel.showingAlertName) {
+                    Button("OK", role: .cancel) {
+                        gameViewModel.showingAlertName = false
+                    }
+                }
                 
                 setTitle( text: "Participantes" )
                     .padding(.top, 44)
