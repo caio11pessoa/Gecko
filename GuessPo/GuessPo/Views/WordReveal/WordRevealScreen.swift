@@ -42,13 +42,18 @@ struct WordRevealScreen: View {
             
             PrimaryButton(title: "Entendido!") {
                 gameViewModel.nextPlayer()
-                _ = navigationCoordinator.popPath()
+                if(gameViewModel.isLastPlayer) {
+                    navigationCoordinator.appendToPath(.gameStart)
+                } else {
+                    _ = navigationCoordinator.popPath()
+                }
             }
             .frame(height: 48)
             .padding(.bottom, 20)
 
         }
         .padding(.horizontal, 20)
+        .navigationBarBackButtonHidden()
 
     }
     

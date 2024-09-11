@@ -13,7 +13,6 @@ struct NameScreen: View {
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
-        if !gameViewModel.isLastPlayer {
             VStack {
                 HStack {
                     Text("Passe o celular para:")
@@ -38,9 +37,6 @@ struct NameScreen: View {
             }
             .foregroundStyle(.guessPoDarkBlue)
             .padding(.horizontal, 20)
-        } else {
-            StartGameScreen(navigationCoordinator: $navigationCoordinator)
-        }
     }
     
     func nameLabel(player: Player?) -> some View {
@@ -55,5 +51,12 @@ struct NameScreen: View {
 }
 
 #Preview {
-    NameScreen(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
+    NavigationStack {
+        NavigationLink {
+            NameScreen(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
+            
+        } label: {
+            Text("Teste")
+        }
+    }
 }

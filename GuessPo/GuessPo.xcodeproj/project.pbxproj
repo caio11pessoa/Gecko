@@ -27,6 +27,7 @@
 		364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EBCB62C861EE600258A61 /* ThemeButton.swift */; };
 		36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D32C8629EA00164504 /* PrimaryButton.swift */; };
 		36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D52C862EEE00164504 /* WordRevealTag.swift */; };
+		C89310E02C908B4100590390 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89310DF2C908B4100590390 /* BackButton.swift */; };
 		C8C026362C864E8900FB2C66 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C026352C864E8900FB2C66 /* ThemeView.swift */; };
 		DD53E38B2C860DDE00B83743 /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD53E38A2C860DDE00B83743 /* TitanOne-Regular.ttf */; };
 		DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53E38E2C860EE100B83743 /* FontExtension.swift */; };
@@ -59,6 +60,7 @@
 		364EBCB62C861EE600258A61 /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		36E300D32C8629EA00164504 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		36E300D52C862EEE00164504 /* WordRevealTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealTag.swift; sourceTree = "<group>"; };
+		C89310DF2C908B4100590390 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		C8C026352C864E8900FB2C66 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		DD53E38A2C860DDE00B83743 /* TitanOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitanOne-Regular.ttf"; sourceTree = "<group>"; };
 		DD53E38C2C860E2F00B83743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				34457C812C8A0F2B00AD0C22 /* SecondButton.swift */,
 				36E300D52C862EEE00164504 /* WordRevealTag.swift */,
 				34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */,
+				C89310DF2C908B4100590390 /* BackButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */,
 				C8C026362C864E8900FB2C66 /* ThemeView.swift in Sources */,
 				34D493762C856CE100B661EC /* Players.swift in Sources */,
+				C89310E02C908B4100590390 /* BackButton.swift in Sources */,
 				34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */,

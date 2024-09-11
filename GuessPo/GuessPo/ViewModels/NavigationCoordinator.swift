@@ -22,4 +22,9 @@ class NavigationCoordinator {
     func goToRoot() {
         path.removeAll()
     }
+    
+    func goToThemeSelect() {
+        path = [.themeSelect]
+    }
+
 }

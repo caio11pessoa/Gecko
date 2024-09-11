@@ -64,6 +64,14 @@ struct ThemeView: View {
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 18)
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    BackButton() {
+                        _ = navigationCoordinator.popPath()
+                    }
+                }
+            }
         }
     }
 }
