@@ -133,25 +133,26 @@ struct HomeView: View {
         RoundedRectangle(cornerRadius: 25)
             .foregroundStyle(.white)
             .overlay {
-                
-                List(gameViewModel.players, id: \.self) { player in
-                    HStack{
-                        Text(player.name)
-                            .font(.guessPoTitan(.callout))
-                        
-                        Spacer()
-                        
-                        Image(systemName: "x.circle")
-                            .font(.system(size: 16))
-                            .foregroundStyle(Color(red: 179/255, green: 179/255, blue: 179/255 ))
-                            .onTapGesture {
-                                
-                                gameViewModel.deletePlayer(player)
-                                
-                            }
+                List {
+                    ForEach(gameViewModel.players, id: \.self){ player in
+                        HStack{
+                            Text(player.name)
+                                .font(.guessPoTitan(.callout))
+                            
+                            Spacer()
+                            
+                            Image(systemName: "x.circle")
+                                .font(.system(size: 16))
+                                .foregroundStyle(Color(red: 179/255, green: 179/255, blue: 179/255 ))
+                                .onTapGesture {
+                                    
+                                    gameViewModel.deletePlayer(player)
+                                    
+                                }
+                        }
+                        .listRowBackground(Color.clear)
                     }
-                    .listRowBackground(Color.clear)
-                    
+                    .onMove(perform: gameViewModel.movePlayer)
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
