@@ -49,11 +49,10 @@ struct WordRevealScreen: View {
                 }
             }
             .frame(height: 48)
-            .padding(.bottom, 32)
+            .padding(.bottom, 20)
 
         }
-        .padding(.horizontal, 38)
-        .ignoresSafeArea()
+        .padding(.horizontal, 20)
         .navigationBarBackButtonHidden()
 
     }
