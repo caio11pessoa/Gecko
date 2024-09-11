@@ -152,7 +152,7 @@ struct HomeView: View {
                         }
                         .listRowBackground(Color.clear)
                     }
-                    
+                    .onMove(perform: gameViewModel.movePlayer)
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)

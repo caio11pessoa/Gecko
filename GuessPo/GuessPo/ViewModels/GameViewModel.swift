@@ -97,6 +97,10 @@ class GameViewModel {
         return "A palavra da rodada é:"
     }
     
+    func movePlayer(indices: IndexSet, newOffset: Int){
+        players.move(fromOffsets: indices, toOffset: newOffset)
+    }
+    
 ///    Esta funçao vai chamar e checar todo o necessario para o jogo funcionar, incluindo:
 ///     - 2+ Jogadores
 ///     - 1 Jogador selecionado
