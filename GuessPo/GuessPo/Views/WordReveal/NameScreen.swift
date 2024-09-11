@@ -34,7 +34,6 @@ struct NameScreen: View {
                     navigationCoordinator.appendToPath(.wordReveal)
                 }
                 .frame(height: 48)
-                .padding(.horizontal, 17)
                 .padding(.bottom, 20)
             }
             .foregroundStyle(.guessPoDarkBlue)
