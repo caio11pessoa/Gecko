@@ -1,7 +1,4 @@
-//
-//  ReadJsonFile.swift
-//  GuessPo
-//
+
 //  Created by Caio de Almeida Pessoa on 05/09/24.
 //
 

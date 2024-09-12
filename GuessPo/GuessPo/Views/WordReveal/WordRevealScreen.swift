@@ -1,26 +1,21 @@
-//
-//  WordReveal.swift
-//  GuessPo
-//
 //  Created by Caio de Almeida Pessoa on 02/09/24.
 //
 
 import SwiftUI
 
 struct WordRevealScreen: View {
+    
     @Binding var navigationCoordinator: NavigationCoordinator
-
     @Binding var gameViewModel: GameViewModel
 
     var body: some View {
-
         VStack(spacing: 0) {
 
             Spacer()
 
             Text(gameViewModel.currentPlayer?.name ?? "Começando!")
-                .font(.guessPoTitan(48))
-                .foregroundStyle(.guessPoDarkBlue)
+                .font(.geckoTitan(48))
+                .foregroundStyle(.geckoDarkBlue)
             
             Text(gameViewModel.getWordTextPreview())
                 .font(.system(size: 16))
@@ -58,9 +53,7 @@ struct WordRevealScreen: View {
     }
     
     var textContent: some View {
-
         Group {
-
             if gameViewModel.playerIsImposter() {
                 Text("O tema da rodada é ")
                 +
@@ -72,10 +65,8 @@ struct WordRevealScreen: View {
                 Text("Todo mundo vai receber essa mesma palavra, exceto o ")
                 +
                 Text("impostor.")
-                    .foregroundStyle(.guessPoDarkRed)
-
+                    .foregroundStyle(.geckoDarkRed)
             }
-
         }
     }
 }

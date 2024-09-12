@@ -1,7 +1,3 @@
-//
-//  ThemeView.swift
-//  GuessPo
-//
 //  Created by Julia Morales on 02/09/24.
 //
 
@@ -17,24 +13,22 @@ fileprivate var themes: [Theme] = [
     ]
 
 struct ThemeView: View {
+    
     @Binding var navigationCoordinator: NavigationCoordinator
-    
     @Binding var gameViewModel: GameViewModel
-    
-    // Criar logica de carregar temas default
-    @State var currentTheme: Theme = themes.first!
+    @State var currentTheme: Theme = themes[0]
     
     let layout = Array(repeating: GridItem(.flexible()), count: 2)
 
     var body: some View {
         ZStack {
-            Color(.guessPoGray)
+            Color(.geckoGray)
                 .ignoresSafeArea(.all)
             
             VStack(alignment: .leading, spacing: 0) {
                 Text("Escolha os temas da rodada")
-                    .font(.guessPoTitan(.title2))
-                    .foregroundStyle(.guessPoDarkBlue)
+                    .font(.geckoPoTitan(.title2))
+                    .foregroundStyle(.geckoDarkBlue)
                     .padding(.top, 20)
                 Text("Selecione um ou mais dos temas abaixo:")
                     .padding(.top, 4)
