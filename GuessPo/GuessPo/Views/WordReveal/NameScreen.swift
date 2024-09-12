@@ -37,11 +37,21 @@ struct NameScreen: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     BackButton() {
-                        _ = navigationCoordinator.popPath()
+                        gameViewModel.showingBackButtonAlert = true
                     }
                 }
             }
-}
+            .alert(isPresented: $gameViewModel.showingBackButtonAlert) {
+            Alert(
+                title: Text("O jogo irá reiniciar e uma nova palavra será sorteada!"),
+                primaryButton: .destructive(
+                    Text("Ok"),
+                    action: { _ = navigationCoordinator.popPath()}
+                ),
+                secondaryButton: .cancel()
+            )
+        }
+    }
     
     func nameLabel(player: Player?) -> some View {
         VStack {
