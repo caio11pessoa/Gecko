@@ -47,8 +47,8 @@ class GameViewModel {
             self.showingAlertName = true
         } else {
             self.players.append(newPlayer)
+            newPlayerName = ""
         }
-        newPlayerName = ""
     }
     
     func deletePlayer(_ player: Player) {
