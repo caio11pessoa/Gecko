@@ -1,19 +1,14 @@
-//
-//  HomeView.swift
-//  GuessPo
-//
 //  Created by Caio de Almeida Pessoa on 02/09/24.
 //
 
 import SwiftUI
 
 struct HomeView: View {
-    @State var navigationCoordinator = NavigationCoordinator()
     
+    @State var navigationCoordinator = NavigationCoordinator()
     @State var gameViewModel = GameViewModel()
     
     var body: some View {
-        
         NavigationStack(path: $navigationCoordinator.path) {
             
             VStack(alignment: .leading, spacing: 0) {
@@ -70,11 +65,9 @@ struct HomeView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     setToolbarIcon(systemName: "gearshape.fill")//features futuras
                 }
-                
             }
             .scenePadding(.horizontal)
-            .background(.guessPoGray)
-            
+            .background(.geckoGray)
             .navigationDestination(for: Routes.self) { route in
                 switch route {
                 case .home:
@@ -100,19 +93,15 @@ struct HomeView: View {
     }
     
     func setTitle(text: String) -> Text {
-        
         Text(text)
-            .font(.guessPoTitan(.title2))
-            .foregroundStyle(.guessPoDarkBlue)
-        
+            .font(.geckoPoTitan(.title2))
+            .foregroundStyle(.geckoDarkBlue)
     }
     
     func setSubTitle(text: String) -> Text {
-        
         Text(text)
             .fontDesign(.rounded)
             .font(.system(size: 16))
-        
     }
     
     func setTextField(
@@ -121,20 +110,16 @@ struct HomeView: View {
     ) -> some View {
         
         TextField(placeholder, text: text)
-            .textFieldStyle(GuessPoTextFieldStyle())
-        
+            .textFieldStyle(GeckoTextFieldStyle())
     }
     
     func setToolbarIcon(systemName: String) -> some View{
-        
         Image(systemName: systemName)
-            .foregroundStyle(.guessPoDarkBlue)
+            .foregroundStyle(.geckoDarkBlue)
             .font(.system(size: 16))
-        
     }
     
     var playerList: some View {
-        
         RoundedRectangle(cornerRadius: 25)
             .foregroundStyle(.white)
             .overlay {
@@ -142,7 +127,7 @@ struct HomeView: View {
                     ForEach(gameViewModel.players, id: \.self){ player in
                         HStack{
                             Text(player.name)
-                                .font(.guessPoTitan(.callout))
+                                .font(.geckoPoTitan(.callout))
                             
                             Spacer()
                             
@@ -150,9 +135,7 @@ struct HomeView: View {
                                 .font(.system(size: 16))
                                 .foregroundStyle(Color(red: 179/255, green: 179/255, blue: 179/255 ))
                                 .onTapGesture {
-                                    
                                     gameViewModel.deletePlayer(player)
-                                    
                                 }
                         }
                         .listRowBackground(Color.clear)
@@ -161,7 +144,6 @@ struct HomeView: View {
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
-                
             }
     }
 }

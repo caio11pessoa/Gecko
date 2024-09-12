@@ -1,7 +1,3 @@
-//
-//  ThemeButton.swift
-//  GuessPo
-//
 //  Created by Gabriel Santiago on 02/09/24.
 //
 
@@ -19,22 +15,22 @@ struct ThemeButton: View {
         Button(action: buttonAction) {
             RoundedRectangle(cornerRadius: 9)
                 .presentationCornerRadius(30)
-                .foregroundStyle(.guessPoLightBlue)
+                .foregroundStyle(.geckoLightBlue)
                 .overlay {
                     if isSelected {
                         RoundedRectangle(cornerRadius: 8)
-                            .stroke(.guessPoDarkBlue, lineWidth: 3)
+                            .stroke(.geckoDarkBlue, lineWidth: 3)
                     }
                     VStack {
                         Image(systemName: symbol)
                             .resizable()
-                            .foregroundStyle(.guessPoDarkBlue)
+                            .foregroundStyle(.geckoDarkBlue)
                             .frame(width: 40, height: 40)
                             .padding(.bottom, 10)
                         Text(title)
-                            .foregroundStyle(.guessPoDarkBlue)
+                            .foregroundStyle(.geckoDarkBlue)
                             .bold()
-                            .font(.guessPoTitan(20))
+                            .font(.geckoTitan(20))
                     }
                 }
         }

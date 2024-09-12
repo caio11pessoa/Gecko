@@ -19,9 +19,8 @@
 		34457C912C8A3B8300AD0C22 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C902C8A3B8300AD0C22 /* Characters.json */; };
 		34457C952C8A3C4D00AD0C22 /* Foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C942C8A3C4D00AD0C22 /* Foods.json */; };
 		34D493762C856CE100B661EC /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493752C856CE100B661EC /* Players.swift */; };
-		34D4937D2C856D8600B661EC /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937C2C856D8600B661EC /* Components.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
-		34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */; };
+		34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */; };
 		34D493842C86AA5C00B661EC /* WordRevealScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493832C86AA5C00B661EC /* WordRevealScreen.swift */; };
 		34D493862C86C9D400B661EC /* StartGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493852C86C9D400B661EC /* StartGameScreen.swift */; };
 		364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EBCB62C861EE600258A61 /* ThemeButton.swift */; };
@@ -52,9 +51,8 @@
 		34457C902C8A3B8300AD0C22 /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
 		34457C942C8A3C4D00AD0C22 /* Foods.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Foods.json; sourceTree = "<group>"; };
 		34D493752C856CE100B661EC /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
-		34D4937C2C856D8600B661EC /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoTextFieldStyle.swift; sourceTree = "<group>"; };
+		34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoTextFieldStyle.swift; sourceTree = "<group>"; };
 		34D493832C86AA5C00B661EC /* WordRevealScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealScreen.swift; sourceTree = "<group>"; };
 		34D493852C86C9D400B661EC /* StartGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameScreen.swift; sourceTree = "<group>"; };
 		364EBCB62C861EE600258A61 /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
@@ -170,12 +168,11 @@
 		34D4937B2C856D7100B661EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				34D4937C2C856D8600B661EC /* Components.swift */,
 				364EBCB62C861EE600258A61 /* ThemeButton.swift */,
 				36E300D32C8629EA00164504 /* PrimaryButton.swift */,
 				34457C812C8A0F2B00AD0C22 /* SecondButton.swift */,
 				36E300D52C862EEE00164504 /* WordRevealTag.swift */,
-				34D493812C8698DD00B661EC /* GuessPoTextFieldStyle.swift */,
+				34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */,
 				C89310DF2C908B4100590390 /* BackButton.swift */,
 			);
 			path = Components;
@@ -282,7 +279,7 @@
 				C8C026362C864E8900FB2C66 /* ThemeView.swift in Sources */,
 				34D493762C856CE100B661EC /* Players.swift in Sources */,
 				C89310E02C908B4100590390 /* BackButton.swift in Sources */,
-				34D493822C8698DD00B661EC /* GuessPoTextFieldStyle.swift in Sources */,
+				34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameScreen.swift in Sources */,
 				34457C822C8A0F2B00AD0C22 /* SecondButton.swift in Sources */,
@@ -294,7 +291,6 @@
 				364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */,
 				DD53E39E2C88C37A00B83743 /* Theme.swift in Sources */,
 				DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */,
-				34D4937D2C856D8600B661EC /* Components.swift in Sources */,
 				34D4937F2C856D9500B661EC /* HomeView.swift in Sources */,
 				3432151A2C825BD100D37B66 /* GuessPoApp.swift in Sources */,
 			);

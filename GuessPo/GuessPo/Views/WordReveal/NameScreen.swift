@@ -1,22 +1,18 @@
-//
-//  NameScreen.swift
-//  GuessPo
-//
 //  Created by Ian Pacini on 02/09/24.
 //
 
 import SwiftUI
 
 struct NameScreen: View {
-    @Binding var navigationCoordinator: NavigationCoordinator
     
+    @Binding var navigationCoordinator: NavigationCoordinator
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
             VStack {
                 HStack {
                     Text("Passe o celular para:")
-                        .font(.guessPoTitan(.title3))
+                        .font(.geckoPoTitan(.title3))
                     Spacer()
                 }
                 
@@ -27,7 +23,7 @@ struct NameScreen: View {
                 Spacer()
                 
                 PrimaryButton(title: "Eu sou o \(gameViewModel.getCurrentPlayerName())") {
-                    guard let player = gameViewModel.currentPlayer else {
+                    guard gameViewModel.currentPlayer != nil else {
                         return
                     }
                     navigationCoordinator.appendToPath(.wordReveal)
@@ -35,17 +31,27 @@ struct NameScreen: View {
                 .frame(height: 48)
                 .padding(.bottom, 20)
             }
-            .foregroundStyle(.guessPoDarkBlue)
+            .foregroundStyle(.geckoDarkBlue)
             .padding(.horizontal, 20)
             .navigationBarBackButtonHidden()
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     BackButton() {
-                        _ = navigationCoordinator.popPath()
+                        gameViewModel.showingBackButtonAlert = true
                     }
                 }
             }
-}
+            .alert(isPresented: $gameViewModel.showingBackButtonAlert) {
+            Alert(
+                title: Text("O jogo irá reiniciar e uma nova palavra será sorteada!"),
+                primaryButton: .destructive(
+                    Text("Ok"),
+                    action: { _ = navigationCoordinator.popPath()}
+                ),
+                secondaryButton: .cancel()
+            )
+        }
+    }
     
     func nameLabel(player: Player?) -> some View {
         VStack {
@@ -53,7 +59,7 @@ struct NameScreen: View {
                 .font(.custom("default", size: 120))
             
             Text(player?.name ?? "Jogador")
-                .font(.guessPoTitan(48))
+                .font(.geckoTitan(48))
         }
     }
 }

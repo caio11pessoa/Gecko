@@ -1,7 +1,3 @@
-//
-//  WordRevealTag.swift
-//  GuessPo
-//
 //  Created by Gabriel Santiago on 02/09/24.
 //
 
@@ -18,30 +14,29 @@ struct WordRevealTag: View {
     
     @ViewBuilder func buildDisplayTag(title: String, isImpostor: Bool) -> some View {
         if isImpostor {
-            
             RoundedRectangle(cornerRadius: 50)
-                .foregroundColor(.guessPoLightRed)
+                .foregroundColor(.geckoLightRed)
                 .overlay {
                     Text(title)
                         .frame(alignment: .center)
-                        .font(.guessPoTitan(17))
-                        .foregroundStyle(.guessPoDarkRed)
+                        .font(.geckoTitan(17))
+                        .foregroundStyle(.geckoDarkRed)
                 }
         } else {
             RoundedRectangle(cornerRadius: 50)
-                .foregroundColor(.guessPoLightBlue)
+                .foregroundColor(.geckoLightBlue)
                 .overlay {
                     Text(title)
                         .frame(alignment: .center)
-                        .font(.guessPoTitan(17))
-                        .foregroundStyle(.guessPoDarkBlue)
+                        .font(.geckoTitan(17))
+                        .foregroundStyle(.geckoDarkBlue)
                 }
         }
     }
 }
 
 #Preview {
-    WordRevealTag(title: "Marcelino pão e vinho", isImpostor: true)
+    WordRevealTag(title: "Word Reveal Tag", isImpostor: true)
         .padding(.horizontal, 20)
         .padding(.vertical, 352)
 }

@@ -1,7 +1,3 @@
-//
-//  Theme.swift
-//  GuessPo
-//
 //  Created by Ian Pacini on 04/09/24.
 //
 
