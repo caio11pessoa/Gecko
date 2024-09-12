@@ -26,6 +26,7 @@ class GameViewModel {
     var selectedTheme: Theme?
     var selectedWord: String?
     var showingAlert: Bool = false
+    var showingBackButtonAlert: Bool = false
     
     var newPlayerName: String = ""
     
