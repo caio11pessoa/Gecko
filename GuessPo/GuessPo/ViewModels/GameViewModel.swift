@@ -21,6 +21,7 @@ class GameViewModel {
     var selectedWord: String?
     var showingAlert: Bool = false
     var showingAlertName: Bool = false
+    var showingBackButtonAlert: Bool = false
     
     var newPlayerName: String = ""
     private var currentPlayerIndex: Int = 0
