@@ -1,7 +1,3 @@
-//
-//  PrimaryButton.swift
-//  GuessPo
-//
 //  Created by Gabriel Santiago on 02/09/24.
 //
 
@@ -16,10 +12,10 @@ struct PrimaryButton: View {
         Button(action: buttonAction) {
             RoundedRectangle(cornerRadius: 9)
                 .presentationCornerRadius(30)
-                .foregroundStyle(.guessPoDarkBlue)
+                .foregroundStyle(.geckoDarkBlue)
                 .overlay {
                     Text(title)
-                        .foregroundStyle(.guessPoGray)
+                        .foregroundStyle(.geckoGray)
                         .fontDesign(.rounded)
                         .font(.headline)
                 }
@@ -28,7 +24,7 @@ struct PrimaryButton: View {
 }
 
 #Preview {
-    PrimaryButton(title: "Botaozinho", buttonAction: {
+    PrimaryButton(title: "Button", buttonAction: {
         //
     })
 }

@@ -1,7 +1,3 @@
-//
-//  Routes.swift
-//  GuessPo
-//
 //  Created by Ian Pacini on 03/09/24.
 //
 

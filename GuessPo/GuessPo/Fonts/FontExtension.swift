@@ -1,7 +1,3 @@
-//
-//  FontExtension.swift
-//  GuessPo
-//
 //  Created by Ian Pacini on 02/09/24.
 //
 
@@ -21,7 +17,7 @@ extension Font {
         case caption2 = 11
     }
     
-    static func guessPoTitan(_ customSize: CGFloat) -> Font {
+    static func geckoTitan(_ customSize: CGFloat) -> Font {
             return .custom("TitanOne", size: customSize)
         }
     
@@ -46,7 +42,7 @@ extension Font {
     /// caption - 12;
     ///
     /// caption2 - 11;
-    static func guessPoTitan(_ size: FontSizes) -> Font {
+    static func geckoPoTitan(_ size: FontSizes) -> Font {
         return .custom("TitanOne", size: size.rawValue)
     }
 }
