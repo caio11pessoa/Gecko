@@ -37,7 +37,15 @@ struct NameScreen: View {
             }
             .foregroundStyle(.guessPoDarkBlue)
             .padding(.horizontal, 20)
-    }
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    BackButton() {
+                        _ = navigationCoordinator.popPath()
+                    }
+                }
+            }
+}
     
     func nameLabel(player: Player?) -> some View {
         VStack {
