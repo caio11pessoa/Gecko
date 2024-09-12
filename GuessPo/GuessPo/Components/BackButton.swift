@@ -1,7 +1,3 @@
-//
-//  BackButton.swift
-//  GuessPo
-//
 //  Created by Julia Morales on 10/09/24.
 //
 

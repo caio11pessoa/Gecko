@@ -1,7 +1,3 @@
-//
-//  SecondButton.swift
-//  GuessPo
-//
 //  Created by Caio de Almeida Pessoa on 05/09/24.
 //
 
@@ -20,9 +16,9 @@ struct SecondButton: View {
                 .overlay {
                     RoundedRectangle(cornerRadius: 9)
                         .stroke(lineWidth: 2.0)
-                        .foregroundStyle(.guessPoDarkBlue)
+                        .foregroundStyle(.geckoDarkBlue)
                     Text(title)
-                        .foregroundStyle(.guessPoDarkBlue)
+                        .foregroundStyle(.geckoDarkBlue)
                         .fontDesign(.rounded)
                         .font(.headline)
                 }
@@ -31,7 +27,7 @@ struct SecondButton: View {
 }
 
 #Preview {
-    SecondButton(title: "Botaozinho", buttonAction: {
+    SecondButton(title: "Button", buttonAction: {
         //
     })
     .frame(width: 144, height: 44)

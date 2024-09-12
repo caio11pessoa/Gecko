@@ -1,13 +1,10 @@
-//
-//  StartGameScreen.swift
-//  GuessPo
-//
 //  Created by Caio de Almeida Pessoa on 03/09/24.
 //
 
 import SwiftUI
 
 struct StartGameScreen: View {
+    
     @Binding var navigationCoordinator: NavigationCoordinator
     
     var body: some View {
@@ -17,12 +14,12 @@ struct StartGameScreen: View {
             
             Image(systemName: "person.fill.questionmark")
                 .font(.system(size: 120))
-                .foregroundStyle(.guessPoDarkBlue)
+                .foregroundStyle(.geckoDarkBlue)
             
             Text("Que comecem os jogos!")
-                .font(.guessPoTitan(44))
+                .font(.geckoTitan(44))
                 .multilineTextAlignment(.center)
-                .foregroundStyle(.guessPoDarkBlue)
+                .foregroundStyle(.geckoDarkBlue)
             
             Text("Hora de descobrir quem é o impostor!")
                 .font(.system(size: 16))

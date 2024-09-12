@@ -1,7 +1,3 @@
-//
-//  GameViewModel.swift
-//  GuessPo
-//
 //  Created by Ian Pacini on 04/09/24.
 //
 
@@ -20,20 +16,17 @@ class GameViewModel {
     }
 
     var imposter: Player?
-    
     var isLastPlayer: Bool = false
-
     var selectedTheme: Theme?
     var selectedWord: String?
     var showingAlert: Bool = false
     var showingBackButtonAlert: Bool = false
     
     var newPlayerName: String = ""
-    
     private var currentPlayerIndex: Int = 0
     
     func nextPlayer(){
-        if currentPlayerIndex == players.count - 1{
+        if currentPlayerIndex == players.count - 1 {
             isLastPlayer = true
         } else {
             currentPlayerIndex += 1

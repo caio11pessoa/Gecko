@@ -1,13 +1,9 @@
-//
-//  GuessPoTextField.swift
-//  GuessPo
-//
 //  Created by Caio de Almeida Pessoa on 02/09/24.
 //
 
 import SwiftUI
 
-struct GuessPoTextFieldStyle: TextFieldStyle {
+struct GeckoTextFieldStyle: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
             .padding(10)
@@ -17,6 +13,6 @@ struct GuessPoTextFieldStyle: TextFieldStyle {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(lineWidth: 0.2)
             }
-            .font(.guessPoTitan(.callout))
+            .font(.geckoPoTitan(.callout))
     }
 }

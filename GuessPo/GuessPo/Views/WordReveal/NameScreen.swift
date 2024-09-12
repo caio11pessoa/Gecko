@@ -1,51 +1,47 @@
-//
-//  NameScreen.swift
-//  GuessPo
-//
 //  Created by Ian Pacini on 02/09/24.
 //
 
 import SwiftUI
 
 struct NameScreen: View {
-    @Binding var navigationCoordinator: NavigationCoordinator
     
+    @Binding var navigationCoordinator: NavigationCoordinator
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("Passe o celular para:")
-                    .font(.guessPoTitan(.title3))
+            VStack {
+                HStack {
+                    Text("Passe o celular para:")
+                        .font(.geckoPoTitan(.title3))
+                    Spacer()
+                }
+                
                 Spacer()
-            }
-            
-            Spacer()
-            
-            nameLabel(player: gameViewModel.currentPlayer == nil ? .init(name: "Jogador 1") : gameViewModel.currentPlayer)
-            
-            Spacer()
-            
-            PrimaryButton(title: "Eu sou o \(gameViewModel.getCurrentPlayerName())") {
-                guard let player = gameViewModel.currentPlayer else {
-                    return
+                
+                nameLabel(player: gameViewModel.currentPlayer == nil ? .init(name: "Jogador 1") : gameViewModel.currentPlayer)
+                
+                Spacer()
+                
+                PrimaryButton(title: "Eu sou o \(gameViewModel.getCurrentPlayerName())") {
+                    guard gameViewModel.currentPlayer != nil else {
+                        return
+                    }
+                    navigationCoordinator.appendToPath(.wordReveal)
                 }
-                navigationCoordinator.appendToPath(.wordReveal)
+                .frame(height: 48)
+                .padding(.bottom, 20)
             }
-            .frame(height: 48)
-            .padding(.bottom, 20)
-        }
-        .foregroundStyle(.guessPoDarkBlue)
-        .padding(.horizontal, 20)
-        .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                BackButton() {
-                    gameViewModel.showingBackButtonAlert = true
+            .foregroundStyle(.geckoDarkBlue)
+            .padding(.horizontal, 20)
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    BackButton() {
+                        gameViewModel.showingBackButtonAlert = true
+                    }
                 }
             }
-        }
-        .alert(isPresented: $gameViewModel.showingBackButtonAlert) {
+            .alert(isPresented: $gameViewModel.showingBackButtonAlert) {
             Alert(
                 title: Text("O jogo irá reiniciar e uma nova palavra será sorteada!"),
                 primaryButton: .destructive(
@@ -63,7 +59,7 @@ struct NameScreen: View {
                 .font(.custom("default", size: 120))
             
             Text(player?.name ?? "Jogador")
-                .font(.guessPoTitan(48))
+                .font(.geckoTitan(48))
         }
     }
 }
