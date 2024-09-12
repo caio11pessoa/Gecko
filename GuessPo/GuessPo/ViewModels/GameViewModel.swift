@@ -20,7 +20,7 @@ class GameViewModel {
     var selectedTheme: Theme?
     var selectedWord: String?
     var showingAlert: Bool = false
-    var showingBackButtonAlert: Bool = false
+    var showingAlertName: Bool = false
     
     var newPlayerName: String = ""
     private var currentPlayerIndex: Int = 0
@@ -36,10 +36,14 @@ class GameViewModel {
     func addPlayer() {
         let newPlayer = Player(name: newPlayerName)
         
-        self.players.append(newPlayer)
-
-        newPlayerName = ""
+        if newPlayer.name.count < 2 {
+            self.showingAlertName = true
+        } else {
+            self.players.append(newPlayer)
+            newPlayerName = ""
+        }
     }
+    
     func deletePlayer(_ player: Player) {
 
         guard let playerIndex: Int = players.firstIndex(of: player) else {
