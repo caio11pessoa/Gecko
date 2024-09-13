@@ -84,7 +84,7 @@
 		3432150D2C825BD100D37B66 = {
 			isa = PBXGroup;
 			children = (
-				343215182C825BD100D37B66 /* GuessPo */,
+				343215182C825BD100D37B66 /* Gecko */,
 				343215172C825BD100D37B66 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		343215182C825BD100D37B66 /* GuessPo */ = {
+		343215182C825BD100D37B66 /* Gecko */ = {
 			isa = PBXGroup;
 			children = (
 				34457C832C8A28A700AD0C22 /* Datas */,
@@ -111,7 +111,7 @@
 				DD53E38D2C860EC200B83743 /* Fonts */,
 				3432151F2C825BD200D37B66 /* Preview Content */,
 			);
-			path = GuessPo;
+			path = Gecko;
 			sourceTree = "<group>";
 		};
 		3432151F2C825BD200D37B66 /* Preview Content */ = {
@@ -425,11 +425,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GuessPo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Gecko/Preview Content\"";
 				DEVELOPMENT_TEAM = 55WBX8T52B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GuessPo/Info.plist;
+				INFOPLIST_FILE = Gecko/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Gecko;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -457,11 +457,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GuessPo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Gecko/Preview Content\"";
 				DEVELOPMENT_TEAM = 55WBX8T52B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GuessPo/Info.plist;
+				INFOPLIST_FILE = Gecko/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Gecko;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
