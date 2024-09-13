@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "343215152C825BD100D37B66"
-               BuildableName = "GuessPo.app"
-               BlueprintName = "GuessPo"
-               ReferencedContainer = "container:GuessPo.xcodeproj">
+               BuildableName = "Gecko.app"
+               BlueprintName = "Gecko"
+               ReferencedContainer = "container:Gecko.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "343215152C825BD100D37B66"
-            BuildableName = "GuessPo.app"
-            BlueprintName = "GuessPo"
-            ReferencedContainer = "container:GuessPo.xcodeproj">
+            BuildableName = "Gecko.app"
+            BlueprintName = "Gecko"
+            ReferencedContainer = "container:Gecko.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "343215152C825BD100D37B66"
-            BuildableName = "GuessPo.app"
-            BlueprintName = "GuessPo"
-            ReferencedContainer = "container:GuessPo.xcodeproj">
+            BuildableName = "Gecko.app"
+            BlueprintName = "Gecko"
+            ReferencedContainer = "container:Gecko.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

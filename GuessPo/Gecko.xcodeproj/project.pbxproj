@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3432151A2C825BD100D37B66 /* GuessPoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343215192C825BD100D37B66 /* GuessPoApp.swift */; };
+		3432151A2C825BD100D37B66 /* GeckoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343215192C825BD100D37B66 /* GeckoApp.swift */; };
 		3432151E2C825BD200D37B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3432151D2C825BD200D37B66 /* Assets.xcassets */; };
 		343215212C825BD200D37B66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343215202C825BD200D37B66 /* Preview Assets.xcassets */; };
 		34457C822C8A0F2B00AD0C22 /* SecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34457C812C8A0F2B00AD0C22 /* SecondButton.swift */; };
@@ -38,8 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		343215162C825BD100D37B66 /* GuessPo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessPo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		343215192C825BD100D37B66 /* GuessPoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessPoApp.swift; sourceTree = "<group>"; };
+		343215162C825BD100D37B66 /* Gecko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gecko.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		343215192C825BD100D37B66 /* GeckoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoApp.swift; sourceTree = "<group>"; };
 		3432151D2C825BD200D37B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343215202C825BD200D37B66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34457C812C8A0F2B00AD0C22 /* SecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondButton.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		343215172C825BD100D37B66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				343215162C825BD100D37B66 /* GuessPo.app */,
+				343215162C825BD100D37B66 /* Gecko.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +106,7 @@
 				34D4937A2C856D6100B661EC /* Views */,
 				34D493772C856D1F00B661EC /* ViewModels */,
 				34D493742C856CC400B661EC /* Models */,
-				343215192C825BD100D37B66 /* GuessPoApp.swift */,
+				343215192C825BD100D37B66 /* GeckoApp.swift */,
 				3432151D2C825BD200D37B66 /* Assets.xcassets */,
 				DD53E38D2C860EC200B83743 /* Fonts */,
 				3432151F2C825BD200D37B66 /* Preview Content */,
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		343215152C825BD100D37B66 /* GuessPo */ = {
+		343215152C825BD100D37B66 /* Gecko */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 343215242C825BD200D37B66 /* Build configuration list for PBXNativeTarget "GuessPo" */;
+			buildConfigurationList = 343215242C825BD200D37B66 /* Build configuration list for PBXNativeTarget "Gecko" */;
 			buildPhases = (
 				343215122C825BD100D37B66 /* Sources */,
 				343215132C825BD100D37B66 /* Frameworks */,
@@ -212,9 +212,9 @@
 			);
 			dependencies = (
 			);
-			name = GuessPo;
+			name = Gecko;
 			productName = GuessPo;
-			productReference = 343215162C825BD100D37B66 /* GuessPo.app */;
+			productReference = 343215162C825BD100D37B66 /* Gecko.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 343215112C825BD100D37B66 /* Build configuration list for PBXProject "GuessPo" */;
+			buildConfigurationList = 343215112C825BD100D37B66 /* Build configuration list for PBXProject "Gecko" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -245,7 +245,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				343215152C825BD100D37B66 /* GuessPo */,
+				343215152C825BD100D37B66 /* Gecko */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 				DD53E39E2C88C37A00B83743 /* Theme.swift in Sources */,
 				DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */,
 				34D4937F2C856D9500B661EC /* HomeView.swift in Sources */,
-				3432151A2C825BD100D37B66 /* GuessPoApp.swift in Sources */,
+				3432151A2C825BD100D37B66 /* GeckoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +430,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GuessPo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Gecko;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -441,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GuessPo.GuessPo;
+				PRODUCT_BUNDLE_IDENTIFIER = Gecko.Gecko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -461,6 +462,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GuessPo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Gecko;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -472,7 +474,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GuessPo.GuessPo;
+				PRODUCT_BUNDLE_IDENTIFIER = Gecko.Gecko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -483,7 +485,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		343215112C825BD100D37B66 /* Build configuration list for PBXProject "GuessPo" */ = {
+		343215112C825BD100D37B66 /* Build configuration list for PBXProject "Gecko" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				343215222C825BD200D37B66 /* Debug */,
@@ -492,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		343215242C825BD200D37B66 /* Build configuration list for PBXNativeTarget "GuessPo" */ = {
+		343215242C825BD200D37B66 /* Build configuration list for PBXNativeTarget "Gecko" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				343215252C825BD200D37B66 /* Debug */,

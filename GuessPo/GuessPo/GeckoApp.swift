@@ -4,7 +4,7 @@
 import SwiftUI
 
 @main
-struct GuessPoApp: App {
+struct GeckoApp: App {
     @State var viewModel: GameViewModel = GameViewModel()
     var body: some Scene {
         WindowGroup {
