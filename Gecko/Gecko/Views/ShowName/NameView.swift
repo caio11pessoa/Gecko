@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-struct NameScreen: View {
+struct ShowNameView: View {
     
     @Binding var navigationCoordinator: NavigationCoordinator
     @Binding var gameViewModel: GameViewModel
@@ -67,7 +67,7 @@ struct NameScreen: View {
 #Preview {
     NavigationStack {
         NavigationLink {
-            NameScreen(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
+            ShowNameView(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
             
         } label: {
             Text("Teste")

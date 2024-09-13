@@ -3,10 +3,10 @@
 
 import Foundation
 
-struct Theme: Identifiable, Hashable {
+struct Category: Identifiable, Hashable {
     var id: UUID = UUID()
     var themeName: String
     var themeSymbol: String
     var wordList: [String]
-    var themeEnum: Themes
+    var themeEnum: Categories
 }

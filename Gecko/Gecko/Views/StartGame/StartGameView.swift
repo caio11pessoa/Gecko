@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-struct StartGameScreen: View {
+struct StartGameView: View {
     
     @Binding var navigationCoordinator: NavigationCoordinator
     
@@ -48,5 +48,5 @@ struct StartGameScreen: View {
 }
 
 #Preview {
-    StartGameScreen(navigationCoordinator: .constant(.init()))
+    StartGameView(navigationCoordinator: .constant(.init()))
 }

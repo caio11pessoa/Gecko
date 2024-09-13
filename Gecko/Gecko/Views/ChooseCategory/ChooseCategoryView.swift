@@ -4,19 +4,19 @@
 import SwiftUI
 
 // Temporario
-fileprivate var themes: [Theme] = [
-    .init(themeName: "Locais", themeSymbol: "map", wordList: ["Locais"], themeEnum: .places),
+fileprivate var themes: [Category] = [
+    .init(themeName: "Locais", themeSymbol: "map.fill", wordList: ["Locais"], themeEnum: .places),
     .init(themeName: "Famosos", themeSymbol: "star.circle.fill", wordList: ["Famosos"], themeEnum: .famous),
     .init(themeName: "Animais", themeSymbol: "dog.fill", wordList: ["Animais"], themeEnum: .animals),
     .init(themeName: "Personagens", themeSymbol: "movieclapper.fill", wordList: ["Personagens"], themeEnum: .characters),
-    .init(themeName: "Comidas", themeSymbol: "bag", wordList: ["Comidas"], themeEnum: .foods)
+    .init(themeName: "Comidas", themeSymbol: "takeoutbag.and.cup.and.straw.fill", wordList: ["Comidas"], themeEnum: .foods)
     ]
 
-struct ThemeView: View {
+struct ChooseCategoryView: View {
     
     @Binding var navigationCoordinator: NavigationCoordinator
     @Binding var gameViewModel: GameViewModel
-    @State var currentTheme: Theme = themes[0]
+    @State var currentTheme: Category = themes[0]
     
     let layout = Array(repeating: GridItem(.flexible()), count: 2)
 
@@ -70,5 +70,5 @@ struct ThemeView: View {
     }
 }
 #Preview {
-    ThemeView(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
+    ChooseCategoryView(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
 }
