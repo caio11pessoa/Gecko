@@ -7,7 +7,7 @@ struct WordsOfThemeJSON: Codable {
     let words: [String]
 }
 
-enum Themes: String {
+enum Categories: String {
     case places = "Places"
     case famous = "Famous"
     case animals = "Animals"

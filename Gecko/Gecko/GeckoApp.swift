@@ -6,9 +6,10 @@ import SwiftUI
 @main
 struct GeckoApp: App {
     @State var viewModel: GameViewModel = GameViewModel()
+    @State var navigationCoordinator: NavigationCoordinator = NavigationCoordinator()
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $viewModel)
         }
     }
 }
