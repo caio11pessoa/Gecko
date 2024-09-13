@@ -5,8 +5,8 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var navigationCoordinator = NavigationCoordinator()
-    @State var gameViewModel = GameViewModel()
+    @Binding var navigationCoordinator: NavigationCoordinator
+    @Binding var gameViewModel: GameViewModel
     
     var body: some View {
         NavigationStack(path: $navigationCoordinator.path) {
@@ -71,17 +71,17 @@ struct HomeView: View {
             .navigationDestination(for: Routes.self) { route in
                 switch route {
                 case .home:
-                    HomeView()
+                    HomeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
                 case .themeSelect:
-                    ThemeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                    ChooseCategoryView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
                 case .nameReveal:
                     // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                    NameScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                    ShowNameView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
                 case .wordReveal:
                     // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                    WordRevealScreen(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                    WordRevealView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
                 case .gameStart:
-                    StartGameScreen(navigationCoordinator: $navigationCoordinator)
+                    StartGameView(navigationCoordinator: $navigationCoordinator)
                 }
             }
             .alert("Jogadores insuficientes!", isPresented: $gameViewModel.showingAlert) {
@@ -149,5 +149,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(navigationCoordinator: .constant(NavigationCoordinator()), gameViewModel: .constant(GameViewModel()))
 }

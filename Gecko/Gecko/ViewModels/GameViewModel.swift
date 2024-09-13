@@ -17,7 +17,7 @@ class GameViewModel {
 
     var imposter: Player?
     var isLastPlayer: Bool = false
-    var selectedTheme: Theme?
+    var selectedTheme: Category?
     var selectedWord: String?
     var showingAlert: Bool = false
     var showingAlertName: Bool = false
@@ -58,7 +58,7 @@ class GameViewModel {
         players.popLast()
     }
     
-    func generateWord(theme: Themes) -> String? {
+    func generateWord(theme: Categories) -> String? {
         let wordsInTheme = JSONManager.getWordsFor(theme: theme)
         return wordsInTheme?.words.randomElement()
     }
@@ -67,7 +67,7 @@ class GameViewModel {
         return players.randomElement()
     }
     
-    func selectTheme(theme: Theme) {
+    func selectTheme(theme: Category) {
         self.selectedTheme = theme
     }
     

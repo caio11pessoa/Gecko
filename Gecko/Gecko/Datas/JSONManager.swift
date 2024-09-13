@@ -6,7 +6,7 @@ import Foundation
 
 class JSONManager {
     
-    private static func getJsonData(_ theme: Themes) -> Data? {
+    private static func getJsonData(_ theme: Categories) -> Data? {
         
         do {
             if let filePath = Bundle.main.path(forResource: theme.rawValue, ofType: "json") {
@@ -36,7 +36,7 @@ class JSONManager {
         return nil
     };
     
-    static func getWordsFor(theme: Themes) -> WordsOfThemeJSON? {
+    static func getWordsFor(theme: Categories) -> WordsOfThemeJSON? {
         
         guard let data: Data = getJsonData(theme) else { return nil }
         let words: WordsOfThemeJSON? = parseObject(jsonData: data)

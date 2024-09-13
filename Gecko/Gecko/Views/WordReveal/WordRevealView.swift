@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-struct WordRevealScreen: View {
+struct WordRevealView: View {
     
     @Binding var navigationCoordinator: NavigationCoordinator
     @Binding var gameViewModel: GameViewModel
@@ -72,5 +72,5 @@ struct WordRevealScreen: View {
 }
 
 #Preview {
-    WordRevealScreen(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
+    WordRevealView(navigationCoordinator: .constant(.init()), gameViewModel: .constant(.init()))
 }
