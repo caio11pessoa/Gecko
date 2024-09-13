@@ -56,16 +56,16 @@ struct HomeView: View {
                 Spacer()
                 
             }
-            .toolbar {
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    setToolbarIcon(systemName: "questionmark.circle")//features futuras
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    setToolbarIcon(systemName: "gearshape.fill")//features futuras
-                }
-            }
+//            .toolbar {
+//                
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    setToolbarIcon(systemName: "questionmark.circle")//features futuras
+//                }
+//                
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    setToolbarIcon(systemName: "gearshape.fill")//features futuras
+//                }
+//            }
             .scenePadding(.horizontal)
             .background(.geckoGray)
             .navigationDestination(for: Routes.self) { route in
