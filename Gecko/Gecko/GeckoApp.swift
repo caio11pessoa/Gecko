@@ -10,6 +10,7 @@ struct GeckoApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $viewModel)
+                .preferredColorScheme(.light)
         }
     }
 }
