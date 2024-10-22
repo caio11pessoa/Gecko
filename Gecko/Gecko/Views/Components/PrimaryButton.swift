@@ -5,7 +5,7 @@ import SwiftUI
 
 struct PrimaryButton: View {
     
-    @State var title: String
+    var title: String
     @State var buttonAction: () -> Void
     
     var body: some View {
