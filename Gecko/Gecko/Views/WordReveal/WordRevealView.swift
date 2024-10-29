@@ -13,9 +13,17 @@ struct WordRevealView: View {
 
             Spacer()
 
-            Text(gameViewModel.currentPlayer?.name ?? "Começando!")
-                .font(.geckoTitan(48))
-                .foregroundStyle(.geckoDarkBlue)
+            Text(gameViewModel.currentPlayer?.name ?? "Começando!").stroke(color: .black, width: 1)
+                .customTextStyle(size: 48)
+//                .font(.geckoTitan(48))
+//                .overlay(
+//                    Text(gameViewModel.currentPlayer?.name ?? "Começando!")
+//                        .font(.custom("TitanOne", size: 48))
+//                        .foregroundColor(.white)
+//                        .offset(x: -4, y: -4) // Ajuste a posição da sombra/contorno para ficar levemente deslocada
+//                )
+//                .shadow(color: .black.opacity(0.2), radius: 4, x: 2, y: 2)
+//                .foregroundStyle(.geckoDarkBlue)
             
             Text(gameViewModel.getWordTextPreview())
                 .font(.system(size: 16))
