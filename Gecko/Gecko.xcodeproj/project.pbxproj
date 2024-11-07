@@ -18,6 +18,7 @@
 		34457C8F2C8A3B2100AD0C22 /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C8E2C8A3B2100AD0C22 /* Animals.json */; };
 		34457C912C8A3B8300AD0C22 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C902C8A3B8300AD0C22 /* Characters.json */; };
 		34457C952C8A3C4D00AD0C22 /* Foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C942C8A3C4D00AD0C22 /* Foods.json */; };
+		346340042CDD1AD200D94485 /* FontGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346340032CDD1AD200D94485 /* FontGecko.swift */; };
 		34D493762C856CE100B661EC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493752C856CE100B661EC /* Player.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
 		34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */; };
@@ -50,6 +51,7 @@
 		34457C8E2C8A3B2100AD0C22 /* Animals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Animals.json; sourceTree = "<group>"; };
 		34457C902C8A3B8300AD0C22 /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
 		34457C942C8A3C4D00AD0C22 /* Foods.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Foods.json; sourceTree = "<group>"; };
+		346340032CDD1AD200D94485 /* FontGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontGecko.swift; sourceTree = "<group>"; };
 		34D493752C856CE100B661EC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -100,6 +102,8 @@
 		343215182C825BD100D37B66 /* Gecko */ = {
 			isa = PBXGroup;
 			children = (
+				346340022CDD1AA000D94485 /* Modifiers */,
+				346340012CDD131600D94485 /* New Group */,
 				34D493742C856CC400B661EC /* Models */,
 				34D4937A2C856D6100B661EC /* Views */,
 				34D493772C856D1F00B661EC /* ViewModels */,
@@ -133,6 +137,21 @@
 				34457C862C8A296700AD0C22 /* JSONManager.swift */,
 			);
 			path = Datas;
+			sourceTree = "<group>";
+		};
+		346340012CDD131600D94485 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				346340032CDD1AD200D94485 /* FontGecko.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		346340022CDD1AA000D94485 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		34791DDD2C949B7600E8369F /* Home */ = {
@@ -320,6 +339,7 @@
 				34D493762C856CE100B661EC /* Player.swift in Sources */,
 				C89310E02C908B4100590390 /* BackButton.swift in Sources */,
 				34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */,
+				346340042CDD1AD200D94485 /* FontGecko.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameView.swift in Sources */,
 				34457C822C8A0F2B00AD0C22 /* SecondButton.swift in Sources */,

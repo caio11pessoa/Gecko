@@ -3,13 +3,6 @@
 
 import SwiftUI
 
-//extension Text {
-//    func fontMaluca(size: Int) -> some View {
-//        self.
-//        return self
-//    }
-//}
-
 struct WordRevealView: View {
     
     @Binding var navigationCoordinator: NavigationCoordinator
@@ -21,7 +14,8 @@ struct WordRevealView: View {
             Spacer()
 
             Text(gameViewModel.currentPlayer?.name ?? "Começando!")
-                .fontMaluca(size: 28)
+                .font(.geckoTitan(48))
+                .foregroundStyle(.geckoDarkBlue)
             
             Text(gameViewModel.getWordTextPreview())
                 .font(.system(size: 16))
