@@ -19,6 +19,7 @@
 		34457C912C8A3B8300AD0C22 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C902C8A3B8300AD0C22 /* Characters.json */; };
 		34457C952C8A3C4D00AD0C22 /* Foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C942C8A3C4D00AD0C22 /* Foods.json */; };
 		346340042CDD1AD200D94485 /* FontGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346340032CDD1AD200D94485 /* FontGecko.swift */; };
+		346340072CDD5C7A00D94485 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 346340062CDD5C7A00D94485 /* RiveRuntime */; };
 		34D493762C856CE100B661EC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493752C856CE100B661EC /* Player.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
 		34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */; };
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346340072CDD5C7A00D94485 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +274,9 @@
 			dependencies = (
 			);
 			name = Gecko;
+			packageProductDependencies = (
+				346340062CDD5C7A00D94485 /* RiveRuntime */,
+			);
 			productName = GuessPo;
 			productReference = 343215162C825BD100D37B66 /* Gecko.app */;
 			productType = "com.apple.product-type.application";
@@ -300,6 +305,9 @@
 				Base,
 			);
 			mainGroup = 3432150D2C825BD100D37B66;
+			packageReferences = (
+				346340052CDD5C7A00D94485 /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			productRefGroup = 343215172C825BD100D37B66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -572,6 +580,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		346340052CDD5C7A00D94485 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		346340062CDD5C7A00D94485 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 346340052CDD5C7A00D94485 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3432150E2C825BD100D37B66 /* Project object */;
 }
