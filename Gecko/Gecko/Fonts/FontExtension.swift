@@ -16,20 +16,21 @@ extension Font {
         case caption = 12
         case caption2 = 11
     }
-    
+
+    @available(*, deprecated, message: "Use fontGecko(size: CGFloat)")
     static func geckoTitan(_ customSize: CGFloat) -> Font {
-            return .custom("TitanOne", size: customSize)
-        }
+        return .custom("TitanOne", size: customSize)
+    }
     
     /// Font: TitanOne
     ///
-    /// largeTitle - 34;   
+    /// largeTitle - 34;
     ///
     /// title - 28;
     ///
     /// title2 - 22;
     ///
-    /// title3 - 20;   
+    /// title3 - 20;
     ///
     /// body - 17;
     ///
