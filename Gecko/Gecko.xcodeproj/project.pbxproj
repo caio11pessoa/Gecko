@@ -105,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				346340022CDD1AA000D94485 /* Modifiers */,
-				346340012CDD131600D94485 /* New Group */,
 				34D493742C856CC400B661EC /* Models */,
 				34D4937A2C856D6100B661EC /* Views */,
 				34D493772C856D1F00B661EC /* ViewModels */,
@@ -141,17 +140,10 @@
 			path = Datas;
 			sourceTree = "<group>";
 		};
-		346340012CDD131600D94485 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				346340032CDD1AD200D94485 /* FontGecko.swift */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		346340022CDD1AA000D94485 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				346340032CDD1AD200D94485 /* FontGecko.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
