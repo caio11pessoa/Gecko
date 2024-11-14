@@ -9,89 +9,87 @@ struct HomeView: View {
     @Binding var gameViewModel: GameViewModel
     
     var body: some View {
-        NavigationStack(path: $navigationCoordinator.path) {
-            ZStack{
-                Rectangle()
-                    .foregroundStyle(.geckoGray)
+        ZStack{
+            Rectangle()
+                .foregroundStyle(.geckoGray)
+            
+            VStack(alignment: .leading, spacing: 0) {
                 
-                VStack(alignment: .leading, spacing: 0) {
-                    
-                    setTitle(text: "Quem vai jogar?")
-                        .padding(.top, 100)
-                    
-                    setSubTitle(text: "Adicione aqui os novos jogadores:")
-                        .padding(.top, 4)
-                    
-                    setTextField("Adicionar", text: $gameViewModel.newPlayerName)
-                        .padding(.top, 8)
-                    
-                    PrimaryButton(title: "Adicionar") {
-                        gameViewModel.addPlayer()
-                    }
-                    .frame(height: 48)
-                    .padding(.top, 16)
-                    .alert("Necessário pelo menos 2 caracteres!", isPresented: $gameViewModel.showingAlertName) {
-                        Button("OK", role: .cancel) {
-                            gameViewModel.showingAlertName = false
-                        }
-                    }
-                    
-                    setTitle( text: "Participantes" )
-                        .padding(.top, 44)
-                    
-                    setSubTitle( text: "Aqui estão todos os participantes até o momento:")
-                        .padding(.top, 4)
-                    
-                    playerList
-                        .padding(.top, 20)
-                        .frame(height: 200)
-                    
-                    PrimaryButton( title: "Jogar" ) {
-                        if gameViewModel.players.count < 3 {
-                            gameViewModel.showingAlert = true
-                        } else {
-                            navigationCoordinator.appendToPath(.themeSelect)
-                        }
-                    }
-                    .frame(height: 48)
-                    .padding(.top, 20)
-                    Spacer()
+                setTitle(text: "Quem vai jogar?")
+                    .padding(.top, 100)
+                
+                setSubTitle(text: "Adicione aqui os novos jogadores:")
+                    .padding(.top, 4)
+                
+                setTextField("Adicionar", text: $gameViewModel.newPlayerName)
+                    .padding(.top, 8)
+                
+                PrimaryButton(title: "Adicionar") {
+                    gameViewModel.addPlayer()
                 }
-                //            .toolbar {
-                //
-                //                ToolbarItem(placement: .topBarTrailing) {
-                //                    setToolbarIcon(systemName: "questionmark.circle")//features futuras
-                //                }
-                //
-                //                ToolbarItem(placement: .topBarTrailing) {
-                //                    setToolbarIcon(systemName: "gearshape.fill")//features futuras
-                //                }
-                //            }
-                .scenePadding(.horizontal)
-                .navigationDestination(for: Routes.self) { route in
-                    switch route {
-                    case .home:
-                        HomeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
-                    case .themeSelect:
-                        ChooseCategoryView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
-                    case .nameReveal:
-                        // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                        ShowNameView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
-                    case .wordReveal:
-                        // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
-                        WordRevealView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
-                    case .gameStart:
-                        StartGameView(navigationCoordinator: $navigationCoordinator)
-                    }
-                }
-                .alert("Jogadores insuficientes!", isPresented: $gameViewModel.showingAlert) {
+                .frame(height: 48)
+                .padding(.top, 16)
+                .alert("Necessário pelo menos 2 caracteres!", isPresented: $gameViewModel.showingAlertName) {
                     Button("OK", role: .cancel) {
-                        gameViewModel.showingAlert = false
+                        gameViewModel.showingAlertName = false
                     }
+                }
+                
+                setTitle( text: "Participantes" )
+                    .padding(.top, 44)
+                
+                setSubTitle( text: "Aqui estão todos os participantes até o momento:")
+                    .padding(.top, 4)
+                
+                playerList
+                    .padding(.top, 20)
+                    .frame(height: 200)
+                
+                PrimaryButton( title: "Jogar" ) {
+                    if gameViewModel.players.count < 3 {
+                        gameViewModel.showingAlert = true
+                    } else {
+                        navigationCoordinator.appendToPath(.themeSelect)
+                    }
+                }
+                .frame(height: 48)
+                .padding(.top, 20)
+                Spacer()
+            }
+            //            .toolbar {
+            //
+            //                ToolbarItem(placement: .topBarTrailing) {
+            //                    setToolbarIcon(systemName: "questionmark.circle")//features futuras
+            //                }
+            //
+            //                ToolbarItem(placement: .topBarTrailing) {
+            //                    setToolbarIcon(systemName: "gearshape.fill")//features futuras
+            //                }
+            //            }
+            .scenePadding(.horizontal)
+            .navigationDestination(for: Routes.self) { route in
+                switch route {
+                case .home:
+                    HomeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .themeSelect:
+                    ChooseCategoryView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .nameReveal:
+                    // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
+                    ShowNameView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .wordReveal:
+                    // Essa tela deve ser refatorada na feat de regra de negocio para mudar seu init.
+                    WordRevealView(navigationCoordinator: $navigationCoordinator, gameViewModel: $gameViewModel)
+                case .gameStart:
+                    StartGameView(navigationCoordinator: $navigationCoordinator)
                 }
             }
-            .ignoresSafeArea()
+            .alert("Jogadores insuficientes!", isPresented: $gameViewModel.showingAlert) {
+                Button("OK", role: .cancel) {
+                    gameViewModel.showingAlert = false
+                }
+            }
         }
+        .ignoresSafeArea()
     }
     
     func setTitle(text: String) -> Text {
