@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/rive-app/rive-ios.git",
       "state" : {
-        "revision" : "a7d2fcbb18a732acef7a07c72336cc3d96e9588d",
-        "version" : "6.3.3"
+        "revision" : "61ed09845f3841d6041dd77c20ec7443287aeb46",
+        "version" : "6.3.6"
       }
     }
   ],

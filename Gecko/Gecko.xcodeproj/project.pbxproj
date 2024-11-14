@@ -19,7 +19,10 @@
 		34457C912C8A3B8300AD0C22 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C902C8A3B8300AD0C22 /* Characters.json */; };
 		34457C952C8A3C4D00AD0C22 /* Foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 34457C942C8A3C4D00AD0C22 /* Foods.json */; };
 		346340042CDD1AD200D94485 /* FontGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346340032CDD1AD200D94485 /* FontGecko.swift */; };
-		346340072CDD5C7A00D94485 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 346340062CDD5C7A00D94485 /* RiveRuntime */; };
+		3463400B2CE6652400D94485 /* SplashScreenGecko.riv in Resources */ = {isa = PBXBuildFile; fileRef = 3463400A2CE6652400D94485 /* SplashScreenGecko.riv */; };
+		3463400D2CE6654B00D94485 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463400C2CE6654B00D94485 /* SplashScreen.swift */; };
+		346340112CE66E7500D94485 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346340102CE66E7500D94485 /* CoordinatorView.swift */; };
+		346340142CE67EA200D94485 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 346340132CE67EA200D94485 /* RiveRuntime */; };
 		34D493762C856CE100B661EC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493752C856CE100B661EC /* Player.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
 		34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */; };
@@ -53,6 +56,9 @@
 		34457C902C8A3B8300AD0C22 /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
 		34457C942C8A3C4D00AD0C22 /* Foods.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Foods.json; sourceTree = "<group>"; };
 		346340032CDD1AD200D94485 /* FontGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontGecko.swift; sourceTree = "<group>"; };
+		3463400A2CE6652400D94485 /* SplashScreenGecko.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreenGecko.riv; sourceTree = "<group>"; };
+		3463400C2CE6654B00D94485 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		346340102CE66E7500D94485 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		34D493752C856CE100B661EC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -78,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				346340072CDD5C7A00D94485 /* RiveRuntime in Frameworks */,
+				346340142CE67EA200D94485 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +110,7 @@
 		343215182C825BD100D37B66 /* Gecko */ = {
 			isa = PBXGroup;
 			children = (
+				346340092CE6651400D94485 /* Animations */,
 				346340022CDD1AA000D94485 /* Modifiers */,
 				34D493742C856CC400B661EC /* Models */,
 				34D4937A2C856D6100B661EC /* Views */,
@@ -146,6 +153,30 @@
 				346340032CDD1AD200D94485 /* FontGecko.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		346340092CE6651400D94485 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				3463400A2CE6652400D94485 /* SplashScreenGecko.riv */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		3463400E2CE66C1500D94485 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3463400C2CE6654B00D94485 /* SplashScreen.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		3463400F2CE66E4C00D94485 /* Coodinator */ = {
+			isa = PBXGroup;
+			children = (
+				346340102CE66E7500D94485 /* CoordinatorView.swift */,
+			);
+			path = Coodinator;
 			sourceTree = "<group>";
 		};
 		34791DDD2C949B7600E8369F /* Home */ = {
@@ -210,6 +241,8 @@
 		34D4937A2C856D6100B661EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3463400F2CE66E4C00D94485 /* Coodinator */,
+				3463400E2CE66C1500D94485 /* SplashScreen */,
 				34D4937B2C856D7100B661EC /* Components */,
 				34791DDD2C949B7600E8369F /* Home */,
 				34791DDF2C949BA200E8369F /* ChooseCategory */,
@@ -267,7 +300,7 @@
 			);
 			name = Gecko;
 			packageProductDependencies = (
-				346340062CDD5C7A00D94485 /* RiveRuntime */,
+				346340132CE67EA200D94485 /* RiveRuntime */,
 			);
 			productName = GuessPo;
 			productReference = 343215162C825BD100D37B66 /* Gecko.app */;
@@ -298,7 +331,7 @@
 			);
 			mainGroup = 3432150D2C825BD100D37B66;
 			packageReferences = (
-				346340052CDD5C7A00D94485 /* XCRemoteSwiftPackageReference "rive-ios" */,
+				346340122CE67EA200D94485 /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = 343215172C825BD100D37B66 /* Products */;
 			projectDirPath = "";
@@ -319,6 +352,7 @@
 				34457C912C8A3B8300AD0C22 /* Characters.json in Resources */,
 				3432151E2C825BD200D37B66 /* Assets.xcassets in Resources */,
 				34457C8F2C8A3B2100AD0C22 /* Animals.json in Resources */,
+				3463400B2CE6652400D94485 /* SplashScreenGecko.riv in Resources */,
 				34457C952C8A3C4D00AD0C22 /* Foods.json in Resources */,
 				34457C852C8A28DA00AD0C22 /* Places.json in Resources */,
 				34457C8B2C8A300D00AD0C22 /* Famous.json in Resources */,
@@ -342,6 +376,7 @@
 				346340042CDD1AD200D94485 /* FontGecko.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameView.swift in Sources */,
+				346340112CE66E7500D94485 /* CoordinatorView.swift in Sources */,
 				34457C822C8A0F2B00AD0C22 /* SecondButton.swift in Sources */,
 				DD53E39C2C88BED900B83743 /* GameViewModel.swift in Sources */,
 				DD53E38F2C860EE100B83743 /* FontExtension.swift in Sources */,
@@ -352,6 +387,7 @@
 				DD53E39E2C88C37A00B83743 /* Category.swift in Sources */,
 				DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */,
 				34D4937F2C856D9500B661EC /* HomeView.swift in Sources */,
+				3463400D2CE6654B00D94485 /* SplashScreen.swift in Sources */,
 				3432151A2C825BD100D37B66 /* GeckoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,20 +610,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		346340052CDD5C7A00D94485 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+		346340122CE67EA200D94485 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.3.3;
+				minimumVersion = 6.3.6;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		346340062CDD5C7A00D94485 /* RiveRuntime */ = {
+		346340132CE67EA200D94485 /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 346340052CDD5C7A00D94485 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			package = 346340122CE67EA200D94485 /* XCRemoteSwiftPackageReference "rive-ios" */;
 			productName = RiveRuntime;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -9,7 +9,7 @@ struct GeckoApp: App {
     @State var navigationCoordinator: NavigationCoordinator = NavigationCoordinator()
     var body: some Scene {
         WindowGroup {
-            HomeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $viewModel)
+            CoordinatorView(viewModel: $viewModel, navigationCoordinator: $navigationCoordinator)
                 .preferredColorScheme(.light)
         }
     }

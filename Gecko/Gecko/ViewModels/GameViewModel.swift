@@ -22,6 +22,7 @@ class GameViewModel {
     var showingAlert: Bool = false
     var showingAlertName: Bool = false
     var showingBackButtonAlert: Bool = false
+    var splashScreenIsActive = true
     
     var newPlayerName: String = ""
     private var currentPlayerIndex: Int = 0
