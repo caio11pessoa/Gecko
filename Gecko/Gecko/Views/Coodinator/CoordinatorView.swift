@@ -9,15 +9,13 @@ import SwiftUI
 
 struct CoordinatorView: View {
     
-    @State private var splashScreenIsActive = true
-    
     @Binding var viewModel: GameViewModel
     @Binding var navigationCoordinator: NavigationCoordinator
     
     var body: some View {
         NavigationStack(path: $navigationCoordinator.path) {
-            if splashScreenIsActive {
-                SplashScreen(splashScreenIsActive: $splashScreenIsActive)
+            if viewModel.splashScreenIsActive {
+                SplashScreen(splashScreenIsActive: $viewModel.splashScreenIsActive)
             } else {
                 HomeView(navigationCoordinator: $navigationCoordinator, gameViewModel: $viewModel)
             }

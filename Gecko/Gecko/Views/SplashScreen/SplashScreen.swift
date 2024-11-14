@@ -10,11 +10,11 @@ import RiveRuntime
 
 struct SplashScreen: View {
     
-    @StateObject var splachGecko = RiveViewModel(fileName: "SplashScreenGecko", fit: .contain, artboardName: "SlapshScreen 2")
+    @StateObject var splashGecko = RiveViewModel(fileName: "SplashScreenGecko", fit: .contain, artboardName: "SlapshScreen 2")
     @Binding var splashScreenIsActive: Bool
     
     var body: some View {
-        splachGecko.view()
+        splashGecko.view()
             .ignoresSafeArea()
             .onAppear{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
@@ -23,7 +23,6 @@ struct SplashScreen: View {
                     }
                 }
             }
-        
     }
 }
 
