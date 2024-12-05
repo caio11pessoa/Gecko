@@ -3,6 +3,7 @@
 
 import SwiftUI
 
+@available(*, deprecated, message: "Use PrimaryButtonGecko(title: String), buttonAction: @escaping () -> Void)")
 struct PrimaryButton: View {
     
     var title: String
@@ -10,7 +11,7 @@ struct PrimaryButton: View {
     
     var body: some View {
         Button(action: buttonAction) {
-            RoundedRectangle(cornerRadius: 9)
+            RoundedRectangle(cornerRadius:9)
                 .presentationCornerRadius(30)
                 .foregroundStyle(.geckoDarkBlue)
                 .overlay {
@@ -24,7 +25,10 @@ struct PrimaryButton: View {
 }
 
 #Preview {
-    PrimaryButton(title: "Button", buttonAction: {
-        //
-    })
+    HStack{
+        PrimaryButton(title: "Button", buttonAction: {
+            //
+        })
+        .frame(width:336, height: 48)
+    }
 }

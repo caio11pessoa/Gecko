@@ -23,6 +23,8 @@
 		3463400D2CE6654B00D94485 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463400C2CE6654B00D94485 /* SplashScreen.swift */; };
 		346340112CE66E7500D94485 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346340102CE66E7500D94485 /* CoordinatorView.swift */; };
 		346340142CE67EA200D94485 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 346340132CE67EA200D94485 /* RiveRuntime */; };
+		34A07E762D02429000A87959 /* PrimaryButtonGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A07E752D02429000A87959 /* PrimaryButtonGecko.swift */; };
+		34A07E782D0249B800A87959 /* ThemeButtonGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A07E772D0249B800A87959 /* ThemeButtonGecko.swift */; };
 		34D493762C856CE100B661EC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493752C856CE100B661EC /* Player.swift */; };
 		34D4937F2C856D9500B661EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D4937E2C856D9500B661EC /* HomeView.swift */; };
 		34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */; };
@@ -59,6 +61,8 @@
 		3463400A2CE6652400D94485 /* SplashScreenGecko.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreenGecko.riv; sourceTree = "<group>"; };
 		3463400C2CE6654B00D94485 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		346340102CE66E7500D94485 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		34A07E752D02429000A87959 /* PrimaryButtonGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonGecko.swift; sourceTree = "<group>"; };
+		34A07E772D0249B800A87959 /* ThemeButtonGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButtonGecko.swift; sourceTree = "<group>"; };
 		34D493752C856CE100B661EC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		34D4937E2C856D9500B661EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -257,7 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				364EBCB62C861EE600258A61 /* ThemeButton.swift */,
+				34A07E772D0249B800A87959 /* ThemeButtonGecko.swift */,
 				36E300D32C8629EA00164504 /* PrimaryButton.swift */,
+				34A07E752D02429000A87959 /* PrimaryButtonGecko.swift */,
 				34457C812C8A0F2B00AD0C22 /* SecondButton.swift */,
 				36E300D52C862EEE00164504 /* WordRevealTag.swift */,
 				34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */,
@@ -370,9 +376,11 @@
 				34457C892C8A2F6A00AD0C22 /* JsonModels.swift in Sources */,
 				36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */,
 				C8C026362C864E8900FB2C66 /* ChooseCategoryView.swift in Sources */,
+				34A07E762D02429000A87959 /* PrimaryButtonGecko.swift in Sources */,
 				34D493762C856CE100B661EC /* Player.swift in Sources */,
 				C89310E02C908B4100590390 /* BackButton.swift in Sources */,
 				34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */,
+				34A07E782D0249B800A87959 /* ThemeButtonGecko.swift in Sources */,
 				346340042CDD1AD200D94485 /* FontGecko.swift in Sources */,
 				36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */,
 				DD53E3922C8674D000B83743 /* NameView.swift in Sources */,
