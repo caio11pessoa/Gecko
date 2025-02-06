@@ -30,6 +30,7 @@
 		34D493822C8698DD00B661EC /* GeckoTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */; };
 		34D493842C86AA5C00B661EC /* WordRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493832C86AA5C00B661EC /* WordRevealView.swift */; };
 		34D493862C86C9D400B661EC /* StartGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D493852C86C9D400B661EC /* StartGameView.swift */; };
+		34D6A2AF2D556C1E008EB2B9 /* ContentPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6A2AE2D556C1E008EB2B9 /* ContentPanel.swift */; };
 		364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364EBCB62C861EE600258A61 /* ThemeButton.swift */; };
 		36E300D42C8629EA00164504 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D32C8629EA00164504 /* PrimaryButton.swift */; };
 		36E300D62C862EEE00164504 /* WordRevealTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E300D52C862EEE00164504 /* WordRevealTag.swift */; };
@@ -68,6 +69,7 @@
 		34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoTextFieldStyle.swift; sourceTree = "<group>"; };
 		34D493832C86AA5C00B661EC /* WordRevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealView.swift; sourceTree = "<group>"; };
 		34D493852C86C9D400B661EC /* StartGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameView.swift; sourceTree = "<group>"; };
+		34D6A2AE2D556C1E008EB2B9 /* ContentPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPanel.swift; sourceTree = "<group>"; };
 		364EBCB62C861EE600258A61 /* ThemeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
 		36E300D32C8629EA00164504 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		36E300D52C862EEE00164504 /* WordRevealTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRevealTag.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				36E300D52C862EEE00164504 /* WordRevealTag.swift */,
 				34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */,
 				C89310DF2C908B4100590390 /* BackButton.swift */,
+				34D6A2AE2D556C1E008EB2B9 /* ContentPanel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				34457C872C8A296700AD0C22 /* JSONManager.swift in Sources */,
 				34D493842C86AA5C00B661EC /* WordRevealView.swift in Sources */,
 				364EBCB72C861EE600258A61 /* ThemeButton.swift in Sources */,
+				34D6A2AF2D556C1E008EB2B9 /* ContentPanel.swift in Sources */,
 				DD53E39E2C88C37A00B83743 /* Category.swift in Sources */,
 				DD53E39A2C87E22C00B83743 /* NavigationCoordinator.swift in Sources */,
 				34D4937F2C856D9500B661EC /* HomeView.swift in Sources */,

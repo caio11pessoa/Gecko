@@ -14,7 +14,7 @@ struct WordRevealView: View {
             Spacer()
 
             Text(gameViewModel.currentPlayer?.name ?? "Começando!")
-                .font(.geckoTitan(48))
+                .fontGecko()
                 .foregroundStyle(.geckoDarkBlue)
             
             Text(gameViewModel.getWordTextPreview())

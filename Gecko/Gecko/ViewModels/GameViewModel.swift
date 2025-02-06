@@ -7,14 +7,14 @@ import Foundation
 class GameViewModel {
     
     var players: [Player] = []
-
+    
     var currentPlayer: Player? {
         if !isLastPlayer && currentPlayerIndex < players.count{
             return players[currentPlayerIndex]
         }
         return nil
     }
-
+    
     var imposter: Player?
     var isLastPlayer: Bool = false
     var selectedTheme: Category?
@@ -36,9 +36,12 @@ class GameViewModel {
     }
     
     func addPlayer() {
+        
         let newPlayer = Player(name: newPlayerName)
         
-        if newPlayer.name.count < 2 {
+        let isNameTooShort = newPlayer.name.count < 2
+        
+        if isNameTooShort {
             self.showingAlertName = true
         } else {
             self.players.append(newPlayer)
@@ -47,12 +50,12 @@ class GameViewModel {
     }
     
     func deletePlayer(_ player: Player) {
-
+        
         guard let playerIndex: Int = players.firstIndex(of: player) else {
             return
         }
         self.players.remove(at: playerIndex)
-
+        
     }
     
     func popPlayerList() -> Player? {
@@ -101,14 +104,14 @@ class GameViewModel {
         players.move(fromOffsets: indices, toOffset: newOffset)
     }
     
-///    Esta funçao vai chamar e checar todo o necessario para o jogo funcionar, incluindo:
-///     - 2+ Jogadores
-///     - 1 Jogador selecionado
-///     - 1 Jogador impostor
-///     - 1 tema selecionado
-///     - 1 palavra selecionada no tema
-///
-///    Deverá jogar um erro caso algum desses processos falhe.
+    ///    Esta funçao vai chamar e checar todo o necessario para o jogo funcionar, incluindo:
+    ///     - 2+ Jogadores
+    ///     - 1 Jogador selecionado
+    ///     - 1 Jogador impostor
+    ///     - 1 tema selecionado
+    ///     - 1 palavra selecionada no tema
+    ///
+    ///    Deverá jogar um erro caso algum desses processos falhe.
     func prepareGame() {
         //TODO: tratamento de erro
         

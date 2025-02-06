@@ -19,7 +19,7 @@ struct PrimaryButtonGecko: View {
                 Group{
                     RoundedRectangle(cornerRadius: 16)
                         .fill(.black)
-                    .offset(x: 4, y: 4)
+                    .offset(y: 4)
                     ZStack{
                         RoundedRectangle(cornerRadius:16)
                             .stroke(.black, lineWidth: 4)

@@ -1,54 +1,54 @@
-//
-//  ThemeButtonGecko.swift
-//  Gecko
-//
-//  Created by Caio de Almeida Pessoa on 05/12/24.
-//
-
 import SwiftUI
 
 struct ThemeButtonGecko: View {
     
-    @State var title: String
-    @State var symbol : String
-    var isSelected: Bool
-    @State var buttonAction: () -> Void
+    let title: String
+    let iconName: String
+    let action: () -> Void
+    @State var isSelected: Bool = false
     
+    var buttonContent: some View {
+        VStack(spacing: 10) {
+            Group{
+                Image(systemName: iconName)
+                    .font(.system(size: 42))
+                Text(title)
+                    .font(.system(size: 18))
+            }
+            .foregroundStyle(isSelected ? Color("IconsThemeColorGeckoSelected") : Color("IconsThemeColorGeckoUnselected"))
+        }
+        .padding(.bottom , isSelected ? 2 : 0)
+    }
     
     var body: some View {
-        Button(action: buttonAction) {
-            RoundedRectangle(cornerRadius: 9)
-                .presentationCornerRadius(30)
-                .foregroundStyle(.geckoLightBlue)
-                .overlay {
-                    if isSelected {
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(.geckoDarkBlue, lineWidth: 3)
+        Image(isSelected ? "ThemeButtonGeckoSelected" : "ThemeButtonGeckoUnselected")
+            .overlay {
+                ZStack {
+                    ZStack {
+                        Image("SelectIcon")
+                            .opacity(isSelected ? 1 : 0)
                     }
-                    VStack {
-                        Image(systemName: symbol)
-                            .resizable()
-                            .foregroundStyle(.geckoDarkBlue)
-                            .frame(width: 50, height: 46)
-                            .padding(.bottom, 10)
-                        Text(title)
-                            .foregroundStyle(.geckoDarkBlue)
-                            .bold()
-                            .font(.geckoTitan(20))
-                    }
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity,
+                        alignment: .topTrailing
+                    )
+                    .padding(8)
+                    buttonContent
                 }
-        }
+            }
+            .onTapGesture {
+                withAnimation {
+                    isSelected.toggle()
+                }
+            }
     }
 }
-
 #Preview {
     VStack{
         Group{
-            
-            ThemeButtonGecko(title: "Marcos", symbol: "trash.fill", isSelected: false, buttonAction: {
-            })
-            ThemeButtonGecko(title: "Marcos", symbol: "trash.fill", isSelected: false, buttonAction: {
-            })
+            ThemeButtonGecko(title: "Marcos", iconName: "map.fill", action: {})
+            ThemeButtonGecko(title: "Marcos", iconName: "dog.fill", action: {})
         }
         .frame(width: 144, height: 144)
     }
