@@ -15,13 +15,15 @@ struct ContentPanel<Content: View>: View {
     }
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 16)
-            .offset(y: 4)
-            .overlay {
+        content
+            .background {
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(.black, lineWidth: 4)
-                    .fill(.white)
-                    .overlay(content)
+                    .offset(y: 4)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(.black, lineWidth: 4)
+                            .fill(.white)
+                    }
             }
     }
 }
