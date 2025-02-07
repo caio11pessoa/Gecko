@@ -22,6 +22,7 @@ struct ThemeButtonGecko: View {
     
     var body: some View {
         Image(isSelected ? "ThemeButtonGeckoSelected" : "ThemeButtonGeckoUnselected")
+            .resizable()
             .overlay {
                 ZStack {
                     ZStack {
