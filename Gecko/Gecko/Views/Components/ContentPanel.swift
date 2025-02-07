@@ -9,13 +9,16 @@ import SwiftUI
 
 struct ContentPanel<Content: View>: View {
     let content: Content
+    let spacing: CGFloat
     
-    init(@ViewBuilder content: @escaping () -> Content) {
+    init(spacing: CGFloat = 8, @ViewBuilder content: @escaping () -> Content) {
+        self.spacing = spacing
         self.content = content()
     }
     
     var body: some View {
         content
+            .padding(spacing)
             .background {
                 RoundedRectangle(cornerRadius: 16)
                     .offset(y: 4)
@@ -35,12 +38,8 @@ struct ContentPanel<Content: View>: View {
             Text("Content!")
                 .foregroundStyle(.black)
                 .font(.geckoPoTitan(.callout))
-            Image(systemName: "globe")
-            Image(systemName: "globe")
-            Image(systemName: "globe")
-            Image(systemName: "globe")
-            
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     .padding()
 }
