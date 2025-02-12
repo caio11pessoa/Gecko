@@ -10,13 +10,13 @@ import SwiftUI
 struct FontGecko: View {
     var body: some View {
         Text("Hello, World!")
-            .fontGecko()
+            .fontGecko(size: 20)
     }
 }
 
 extension View {
-    func fontGecko(size: CGFloat = 48, strokeColor: Color = .black, foregroundColor: Color = .white) -> some View {
-        return stroke(color: strokeColor, width: size/48)
+    func fontGecko(size: CGFloat = 24, strokeColor: Color = .black, foregroundColor: Color = .white) -> some View {
+        return stroke(color: strokeColor, width: size/24)
             .customTextStyle(size: size, shadeColor: strokeColor, foregroundColor: foregroundColor)
     }
     
@@ -63,7 +63,7 @@ struct StrokeModifier: ViewModifier {
 struct TitanFontShadeTextModifier: ViewModifier {
     var size: CGFloat
     var titanFont: Font { .custom("TitanOne", size: size) }
-    var offsetProportional: CGFloat { -size/24 }
+    var offsetProportional: CGFloat { -size/14 }
     var foregroundColor: Color = .white
     var shadeColor: Color
     func body(content: Content) -> some View {
