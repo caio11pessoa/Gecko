@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3415E2102D5BB52500CCAB2F /* HomeViewGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415E20F2D5BB52500CCAB2F /* HomeViewGecko.swift */; };
 		3415E2122D5BB7E500CCAB2F /* GeckoTextFieldStyleV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415E2112D5BB7E500CCAB2F /* GeckoTextFieldStyleV2.swift */; };
-		342A61A02D55B619002154AF /* SecondButtonGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A619F2D55B619002154AF /* SecondButtonGecko.swift */; };
 		342A61A22D55BC38002154AF /* WorldRevealTagGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A61A12D55BC38002154AF /* WorldRevealTagGecko.swift */; };
 		342A61A42D55BDBE002154AF /* BackButtonGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A61A32D55BDBE002154AF /* BackButtonGecko.swift */; };
 		3432151A2C825BD100D37B66 /* GeckoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343215192C825BD100D37B66 /* GeckoApp.swift */; };
@@ -53,7 +52,6 @@
 /* Begin PBXFileReference section */
 		3415E20F2D5BB52500CCAB2F /* HomeViewGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewGecko.swift; sourceTree = "<group>"; };
 		3415E2112D5BB7E500CCAB2F /* GeckoTextFieldStyleV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeckoTextFieldStyleV2.swift; sourceTree = "<group>"; };
-		342A619F2D55B619002154AF /* SecondButtonGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondButtonGecko.swift; sourceTree = "<group>"; };
 		342A61A12D55BC38002154AF /* WorldRevealTagGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldRevealTagGecko.swift; sourceTree = "<group>"; };
 		342A61A32D55BDBE002154AF /* BackButtonGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonGecko.swift; sourceTree = "<group>"; };
 		343215162C825BD100D37B66 /* Gecko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gecko.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,7 +276,6 @@
 				36E300D32C8629EA00164504 /* PrimaryButton.swift */,
 				34A07E752D02429000A87959 /* PrimaryButtonGecko.swift */,
 				34457C812C8A0F2B00AD0C22 /* SecondButton.swift */,
-				342A619F2D55B619002154AF /* SecondButtonGecko.swift */,
 				36E300D52C862EEE00164504 /* WordRevealTag.swift */,
 				342A61A12D55BC38002154AF /* WorldRevealTagGecko.swift */,
 				34D493812C8698DD00B661EC /* GeckoTextFieldStyle.swift */,
@@ -390,7 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				342A61A02D55B619002154AF /* SecondButtonGecko.swift in Sources */,
 				34D493862C86C9D400B661EC /* StartGameView.swift in Sources */,
 				34457C892C8A2F6A00AD0C22 /* JsonModels.swift in Sources */,
 				3415E2102D5BB52500CCAB2F /* HomeViewGecko.swift in Sources */,

@@ -12,11 +12,12 @@ struct HomeViewGecko: View {
         ZStack{
             Rectangle()
                 .foregroundStyle(.geckoV2LightYellow)
+                .ignoresSafeArea()
             
             VStack(alignment: .leading, spacing: 0) {
                 
                 setTitle(text: "Quem vai jogar?")
-                    .padding(.top, 100)
+                    .padding(.top, 32)
                 
                 setSubTitle(text: "Coloque aqui o nome do jogador que quer adicionar")
                     .padding(.top, 4)
@@ -37,7 +38,7 @@ struct HomeViewGecko: View {
                 setTitle( text: "Participantes" )
                     .padding(.top, 44)
                 
-                setSubTitle( text: "Aqui estão todos os participantes até o momento:")
+                setSubTitle( text: "Aqui estão todos os participantes até o momento")
                     .padding(.top, 4)
                 
                 playerList
@@ -45,8 +46,9 @@ struct HomeViewGecko: View {
                     .frame(height: 237)
                 
                 // TODO: Refactor component to properly handle disabled mode
-
-                SecondButtonGecko(title: "Jogar") {
+                
+                PrimaryButtonGecko(title: "Jogar", isDisabled: .constant(gameViewModel.players.count < 3)) {
+                    print(UIScreen.main.bounds.height)
                     if gameViewModel.players.count < 3 {
                         gameViewModel.showingAlert = true
                     } else {
@@ -79,8 +81,12 @@ struct HomeViewGecko: View {
                     gameViewModel.showingAlert = false
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Image(.geckoLogo)
+                }
+            }
         }
-        .ignoresSafeArea()
     }
     
     func setTitle(text: String) -> some View {
@@ -164,5 +170,7 @@ struct HomeViewGecko: View {
 }
 
 #Preview {
-    HomeViewGecko(navigationCoordinator: .constant(NavigationCoordinator()), gameViewModel: .constant(GameViewModel()))
+    NavigationStack {
+        HomeViewGecko(navigationCoordinator: .constant(NavigationCoordinator()), gameViewModel: .constant(GameViewModel()))
+    }
 }
